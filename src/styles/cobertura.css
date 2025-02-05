@@ -1,0 +1,306 @@
+.imagem-da-cobertura {
+    min-height: 70vh;
+    background-image: url(../../public/images/brownie.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    min-width: 250px;
+    width: 20%;
+    
+}
+
+.menu-active > * {
+    filter: opacity(0);
+    
+    transition: .3s;
+}
+.menu-active:hover > * {
+    filter: opacity(1);
+}
+
+.menu-active:hover  {
+
+    background-image: none;
+    background-color: #FFE9F3;
+
+}
+
+.menu-active {
+    padding: 0px 20px;
+}
+
+.imagem-da-cobertura > h3 {
+    font-size: 32px;
+
+    margin: 30% 0 15% 0;
+}
+
+.imagem-da-cobertura > p {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#bolo-icon {
+    filter: opacity(0.5);
+
+    margin: 30% 0;
+}
+
+.adicionar-cobertura-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: #D4686E;
+    color: #fff;
+
+    padding: 8px 50px;
+
+    font-size: 15px;
+    font-weight: 200;
+}
+
+section.coberturas {
+
+}
+
+@media screen and (max-width: 1260px) {
+    .imagem-da-cobertura {
+        min-height: 70vh;
+        background-image: url(../../public/images/brownie.jpg);
+        background-size: cover;
+        min-width: 150px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        padding: 30px 20px;
+
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .menu-active > * {
+        filter: opacity(0);
+        
+        transition: .3s;
+    }
+    .menu-active:hover > * {
+        filter: opacity(1);
+    }
+
+   .menu-active:hover  {
+    
+        background-image: none;
+        background-color: #FFE9F3;
+
+    
+    }
+
+    .imagem-da-cobertura > h3 {
+        font-size: 28px;
+    
+        margin: 0 0 15% 0;
+    }
+    .imagem-da-cobertura > p {
+        font-size: 18px;
+    }
+    #bolo-icon {
+        width: 65px;
+        margin: 12% 0%;
+    }
+
+    .adicionar-cobertura-btn {
+        border: none;
+        border-radius: 10px;
+        background-color: #D4686E;
+        color: #fff;
+    
+        padding: 8px 80px;
+    
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    /* Ultimo elemento */
+
+    section.coberturas > :last-child{
+        width: 100%;
+
+        background-position: center center;
+    }
+
+    .coberturas > :last-child > h3{
+        font-size: 35px;
+    }
+
+    .coberturas > :last-child > p {
+        font-size: 22px;
+    }
+
+    .coberturas > :last-child > #bolo-icon {
+        width: 65px;
+        margin: 20% 0;
+    }
+    .coberturas > :last-child > .adicionar-cobertura-btn {
+        padding: 5px 70px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 732px) {
+    .imagem-da-cobertura {
+        min-height: 70vh;
+        background-image: url(../../public/images/brownie.jpg);
+        background-size: cover;
+        min-width: 150px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-active {
+        padding: 30px 20px;
+    }
+
+    .menu-active > * {
+        filter: opacity(0);
+        
+        transition: .3s;
+    }
+    .menu-active:hover > * {
+        filter: opacity(1);
+    }
+    
+    .menu-active:hover  {
+    
+        background-image: none;
+        background-color: #FFE9F3;
+    
+    }
+
+    .imagem-da-cobertura > h3 {
+        font-size: 28px;
+    
+        margin: 0 0 15% 0;
+    }
+    .imagem-da-cobertura > p {
+        font-size: 18px;
+    }
+    #bolo-icon {
+        width: 65px;
+        margin: 12% 0%;
+    }
+
+    .adicionar-cobertura-btn {
+        border: none;
+        border-radius: 10px;
+        background-color: #D4686E;
+        color: #fff;
+    
+        padding: 8px 80px;
+    
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    section.coberturas > :last-child{
+        width: 100%;
+        height: 100vh;
+
+        background-position: center center;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .imagem-da-cobertura {
+        min-height: 50vh;
+        /* max-height: 400px; */
+        background-image: url(../../images/brownie.jpg);
+        background-size: cover;
+        min-width: 120px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-active {
+        padding: 20px;
+    }
+    .menu-active > * {
+        filter: opacity(0);
+        
+        transition: .3s;
+    }
+    .menu-active:hover > * {
+        filter: opacity(1);
+    }
+    
+    .menu-active:hover  {
+    
+        background-image: none;
+        background-color: #FFE9F3;
+    
+    }
+
+    .imagem-da-cobertura > h3 {
+        font-size: 15px;
+    
+        margin: 0 0 15% 0;
+    }
+
+    .imagem-da-cobertura > p {
+        font-size: 10px;
+    }
+
+    #bolo-icon {
+        width: 48px;
+        margin: 20% 0;
+    }
+
+    .adicionar-cobertura-btn {
+        border: none;
+        border-radius: 10px;
+        background-color: #D4686E;
+        color: #fff;
+    
+        padding: 4px 30px;
+        margin-top: 20%;
+
+        border-radius: 5px;
+    
+        font-size: 10px;
+        font-weight: 100;
+    }
+
+    /* Ultimo elemento */
+
+    section.coberturas > :last-child{
+        width: 100%;
+
+        background-position: center center;
+    }
+
+    .coberturas > :last-child > h3{
+        font-size: 30px;
+    }
+
+    .coberturas > :last-child > p {
+        font-size: 20px;
+    }
+
+    .coberturas > :last-child > #bolo-icon {
+        width: 60px;
+    }
+    .coberturas > :last-child > .adicionar-cobertura-btn {
+        padding: 5px 70px;
+        font-size: 20px;
+    }
+
+    
+}

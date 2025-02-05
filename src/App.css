@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poiret+One&display=swap');
+
+#root {
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* FONTS */
+.font-header {
+  font-size: small;
+}
+
+.font-title {
+  font-family: 'Poiret One';
+  font-size: 35px;
+}
+
+.font-subtitle {
+  font-family: 'League Spartan';
+  font-size: 15px
+}
+
+.font-spartan {
+  font-family: 'League Spartan';
+}
+.font-poiret {
+  font-family: 'Poiret One';
+}
+
+.font-w-normal {
+  font-weight: 300;
+}
+.font-s-small {
+  font-size: small;
+}
+.font-s-smaller {
+  font-size: smaller;
+}
+
+.font-title-spartan {
+  font-family: 'League Spartan';
+  font-size: 35px;
+}
+
+.font-s-subtitle {
+  font-size: 15px;
+}
+
+.font-feedback-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/*BG COLORS*/
+.bg-smoosh-pink {
+  background-color: #FFE9F3;
+}
+
+.bg-accent{
+  background-color: #D4686E;
+}
+
+.bg-dark-blue {
+  background-color: #55868C;
+}
+
+.bg-light-blue {
+  background-color: #D9FFEB;
+}
+
+.bg-light-pink {
+  background-color: #FFE9F3;
+}
+.bg-cinza {
+  background-color: #e6e6e6;
+}
+
+/*COLORS*/
+.color-subtitle {
+  color: #D4686E;
+}
+
+.color-dark-blue {
+  color: #55868C;
+}
+
+/*WIDTH*/
+.w-60 {
+  width: 60%;
+}
+.w-70 {
+  width: 70%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-90 {
+  width: 90%;
+}
+
+/* OTHER */
+
+.feedback-circle {
+  width: 5vw;
+  height: 5vw;
+}
+
+.ham-menu-li {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.opacity-0 {
+  filter: opacity(0);
+}
+.opacity-1 {
+  filter: opacity(1);
+}
+
+.menu-hamburguer {
+  transition: .3s;
+}
+
+.monte-seu-bolo-imagens {
+  height: 85vh;
+}
+
+.quadrado-selecionavel {
+  width: 160px;
+  height: 120px;
+  box-shadow: 0px 0px 5px 1px rgba(102, 102, 102, 0.384);
+}
+
+.seletor:focus {
+  appearance: none; /* Remove o estilo padrão do sistema */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 15px;
+  
+}
+
+
+
+
+/*MEDIA QUERYS*/
+@media (max-width: 640px) {
+  .font-s-small {
+    font-size: 10px;
+  }
+
+  .font-feedback-title {
+    font-size: 20px;
+  }
+
+  .font-title {
+    font-family: 'Poiret One';
+    font-size: 24px;
+  }
+
+  .font-title-spartan {
+    font-family: 'League Spartan';
+    font-size: 24px;
+  }
+
+  .font-s-subtitle {
+    font-size: 10px;
+  }
+
+  .font-subtitle {
+    font-size: 10px;
+  }
+
+  
+
+  /* OTHER */
+  .feedback-circle {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  .ham-menu-li {
+    font-size: 15px;
+    font-weight: 400;
+    font-weight: 500;
+    border-color: #e7cccd !important;
+  }
+
+  .monte-seu-bolo-imagens {
+    height: 55vh;
+  }
+  
+}
+
+
+@media (max-width: 995px) {
+  .quadrado-selecionavel {
+    width: 120px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 580px) {
+  .quadrado-selecionavel {
+    width: 110px;
+    height: 90px;
+  }
+}
+@media (max-width: 395px) {
+  .quadrado-selecionavel {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (max-width: 365px) {
+  .quadrado-selecionavel {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+
+
+.preencher-div {
+  padding-top: 32%;
+}
+
+
