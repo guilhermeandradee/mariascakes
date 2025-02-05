@@ -205,7 +205,7 @@ function MonteSeuBoloMain() {
                         <h3 className="font-poiret text-center">NO ACETATO</h3>
                         <p className="font-spartan text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
-                        <img id="bolo-icon" src="/public/images/boloicon.svg" alt="ícone de bolo" />
+                        <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
                         <button className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
                     </div>
@@ -217,7 +217,7 @@ function MonteSeuBoloMain() {
                         <h3 className="font-poiret text-center">NO ACETATO</h3>
                         <p className="font-spartan text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
-                        <img id="bolo-icon" src="/public/images/boloicon.svg" alt="ícone de bolo" />
+                        <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
                         <button className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
                     </div>
@@ -229,7 +229,7 @@ function MonteSeuBoloMain() {
                         <h3 className="font-poiret text-center">NO ACETATO</h3>
                         <p className="font-spartan text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
-                        <img id="bolo-icon" src="/public/images/boloicon.svg" alt="ícone de bolo" />
+                        <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
                         <button className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
                     </div>
@@ -241,7 +241,7 @@ function MonteSeuBoloMain() {
                         <h3 className="font-poiret text-center">NO ACETATO</h3>
                         <p className="font-spartan text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
-                        <img id="bolo-icon" src="/public/images/boloicon.svg" alt="ícone de bolo" />
+                        <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
                         <button className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
                     </div>
@@ -252,7 +252,7 @@ function MonteSeuBoloMain() {
                         <h3 className="font-poiret text-center">NO ACETATO</h3>
                         <p className="font-spartan text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
-                        <img id="bolo-icon" src="/public/images/boloicon.svg" alt="ícone de bolo" />
+                        <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
                         <button className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
                     </div>
@@ -269,56 +269,56 @@ function MonteSeuBoloMain() {
                         <ul>
                             <li>
                                 <div>
-                                    
+
                                 </div>
                                 <p className="m-0">PÓ CINTILANTE</p>
                             </li>
 
                             <li>
                                 <div>
-                                    
+
                                 </div>
                                 <p className="m-0">PÓ GLITTER</p>
                             </li>
 
                             <li>
                                 <div>
-                                    
+
                                 </div>
                                 <p className="m-0">PRETO</p>
                             </li>
 
                             <li>
                                 <div>
-                                    
+
                                 </div>
                                 <p className="m-0">AZUL ANIL</p>
                             </li>
 
                             <li>
                                 <div>
-                                    
+
                                 </div>
                                 <p className="m-0">PÓ CINTILANTE</p>
                             </li>
 
                             <li>
                                 <div>
-                                    
+
                                 </div>
                                 <p className="m-0">PÓ GLITTER</p>
                             </li>
 
                             <li>
                                 <div>
-                                    
+
                                 </div>
                                 <p className="m-0">PRETO</p>
                             </li>
 
                             <li>
                                 <div>
-                                    
+
                                 </div>
                                 <p className="m-0">AZUL ANIL</p>
                             </li>

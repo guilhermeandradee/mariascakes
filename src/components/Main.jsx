@@ -19,7 +19,7 @@ function Main() {
                 className="d-flex flex-column pt-5 px-3 px-md-5 pb-5" 
                 
                 style={{
-                    backgroundImage: "url(/public/backgoundimage.jpg)",
+                    backgroundImage: "url(/backgoundimage.jpg)",
                     backgroundSize: 'cover',
                     // minHeight: isMobileView ? '60vh' : '85vh' 
                     
@@ -42,7 +42,7 @@ function Main() {
                 {/*  fotos   */}
                 <div className="row w-100 m-0 d-flex text-light">
                     <figure className="d-flex col-6 col-sm-3 bg-success px-0 preencher-div m-0"
-                    style={{backgroundImage: 'url(/public/images/brownie.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                    style={{backgroundImage: 'url(/images/brownie.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                         <div className="bg-dark-blue w-100 p-2 py-md-3">
                             <p className="m-0  font-s-small text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
                         </div>
@@ -50,7 +50,7 @@ function Main() {
                     
                     
                     <figure className=" col-6 col-sm-3 bg-success px-0 m-0"
-                    style={{backgroundImage: 'url(/public/images/brownie.jpg)',
+                    style={{backgroundImage: 'url(/images/brownie.jpg)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}>
@@ -61,7 +61,7 @@ function Main() {
 
 
                     <figure className=" col-6 col-sm-3 bg-success px-0 preencher-div m-0"
-                    style={{backgroundImage: 'url(/public/images/brownie.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
+                    style={{backgroundImage: 'url(/images/brownie.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
                         <div className="bg-dark-blue w-100 p-2 py-md-3">
                             <p className="m-0  font-s-small text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
                         </div>
@@ -69,7 +69,7 @@ function Main() {
 
 
                     <figure className=" col-6 col-sm-3 bg-success px-0 m-0"
-                    style={{backgroundImage: 'url(/public/images/brownie.jpg)',
+                    style={{backgroundImage: 'url(/images/brownie.jpg)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}>
