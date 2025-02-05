@@ -1,6 +1,7 @@
 import { useState } from "react"
 import '../../styles/cobertura.css'
 import '../../styles/add-decoracao.css'
+import '../../styles/recheios.css'
 
 function MonteSeuBoloMain() {
 
@@ -133,16 +134,17 @@ function MonteSeuBoloMain() {
                     </div>
                 </section>
 
-                <section className="bg-light-blue pt-5 d-flex flex-column align-items-center pb-5" >
-                    <h2 className="text-center font-title">Recheios</h2>
+                <section className="bg-light-blue pt-5 px-4 d-flex flex-column align-items-center pb-5 recheios" >
+                    <h2 className="text-center font-title"
+                    >Recheios</h2>
 
-                    <div className="d-flex flex-column col-6 align-items-center font-spartan mt-5">
+                    <div className="d-flex flex-column col-12 col-md-6 align-items-center font-spartan mt-5">
 
-                        <label className="w-100 fs-5 font-w-normal">TRADICIONAL</label>
+                        <label className="w-100 font-w-normal">TRADICIONAL</label>
                         <select 
                         value={recheioEscolhido} 
                         onChange={handleChange}
-                        className="w-100 bg-dark-blue py-3 px-3 border-0 text-light seletor"
+                        className="w-100 bg-dark-blue py-2 px-3 border-0 text-light seletor"
                         id="tamanho" name="tamanho"
                         style={{
                             borderRadius: '3px',
@@ -159,9 +161,9 @@ function MonteSeuBoloMain() {
                         </select>
 
 
-                        <label className="w-100 fs-5 font-w-normal mt-5">RECHEIO SUPERIOR GOURMET</label>
+                        <label className="w-100 font-w-normal mt-5">RECHEIO SUPERIOR GOURMET</label>
                         <select
-                        className="w-100 bg-dark-blue py-3 px-3 border-0 text-light seletor"
+                        className="w-100 bg-dark-blue py-2 px-3 border-0 text-light seletor"
                         value={recheioEscolhido} 
                         onChange={handleChange}
                         id="tamanho" name="tamanho"
@@ -177,9 +179,9 @@ function MonteSeuBoloMain() {
                         </select>
 
 
-                        <label className="w-100 fs-5 font-w-normal mt-5">REHCEIO SUPERIOR FRUTAS (TRADICIONAL + FRUTA) </label>
+                        <label className="w-100 font-w-normal mt-5">REHCEIO SUPERIOR FRUTAS (TRADICIONAL + FRUTA) </label>
                         <select
-                        className="w-100 bg-dark-blue py-3 px-3 border-0 text-light seletor mb-5"
+                        className="w-100 bg-dark-blue py-2 px-3 border-0 text-light seletor mb-5"
                         value={recheioEscolhido} 
                         onChange={handleChange}
                         id="tamanho" name="tamanho"
@@ -258,11 +260,11 @@ function MonteSeuBoloMain() {
                     </div>
                 </section>
 
-                <section className="add-decoracao w-100">
+                <section className="add-decoracao w-100 mt-5">
                     <div className="separa-decoracao-esquerda">
                         <h2 className="font-poiret">ADICIONE UMA DECORAÇÃO</h2>
 
-                        <p>OS VALORES SÃO ACRESCENTADOS CONFORME O TIPO DE DECORAÇÂOEM DÚVIDA, CONSULTE O <a href="">CARDÁPIO</a></p>
+                        <p className="font-spartan">OS VALORES SÃO ACRESCENTADOS CONFORME O TIPO DE DECORAÇÂOEM DÚVIDA, CONSULTE O <a href="">CARDÁPIO</a></p>
                     </div>
 
                     <div className="separa-decoracao-direita">
@@ -271,56 +273,56 @@ function MonteSeuBoloMain() {
                                 <div>
 
                                 </div>
-                                <p className="m-0">PÓ CINTILANTE</p>
+                                <p className="m-0 font-spartan">PÓ CINTILANTE</p>
                             </li>
 
                             <li>
                                 <div>
 
                                 </div>
-                                <p className="m-0">PÓ GLITTER</p>
+                                <p className="m-0 font-spartan">PÓ GLITTER</p>
                             </li>
 
                             <li>
                                 <div>
 
                                 </div>
-                                <p className="m-0">PRETO</p>
+                                <p className="m-0 font-spartan">PRETO</p>
                             </li>
 
                             <li>
                                 <div>
 
                                 </div>
-                                <p className="m-0">AZUL ANIL</p>
+                                <p className="m-0 font-spartan">AZUL ANIL</p>
                             </li>
 
                             <li>
                                 <div>
 
                                 </div>
-                                <p className="m-0">PÓ CINTILANTE</p>
+                                <p className="m-0 font-spartan">PÓ CINTILANTE</p>
                             </li>
 
                             <li>
                                 <div>
 
                                 </div>
-                                <p className="m-0">PÓ GLITTER</p>
+                                <p className="m-0 font-spartan">PÓ GLITTER</p>
                             </li>
 
                             <li>
                                 <div>
 
                                 </div>
-                                <p className="m-0">PRETO</p>
+                                <p className="m-0 font-spartan">PRETO</p>
                             </li>
 
                             <li>
                                 <div>
 
                                 </div>
-                                <p className="m-0">AZUL ANIL</p>
+                                <p className="m-0 font-spartan">AZUL ANIL</p>
                             </li>
                         </ul>
                     </div>

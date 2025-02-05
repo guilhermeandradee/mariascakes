@@ -213,12 +213,15 @@ section.coberturas {
 
         background-position: center center;
     }
+    section.coberturas > :last-child #bolo-icon{
+        margin: 10% 0 15% 0;
+    }
 }
 
 @media screen and (max-width: 560px) {
     .imagem-da-cobertura {
         min-height: 50vh;
-        /* max-height: 400px; */
+        max-height: 800px;
         background-image: url(../../images/brownie.jpg);
         background-size: cover;
         min-width: 120px;
@@ -296,6 +299,7 @@ section.coberturas {
 
     .coberturas > :last-child > #bolo-icon {
         width: 60px;
+        margin-bottom: 15%;
     }
     .coberturas > :last-child > .adicionar-cobertura-btn {
         padding: 5px 70px;
