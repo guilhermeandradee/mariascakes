@@ -1,0 +1,134 @@
+.resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultado > h2 {
+    font-size: 48px;
+    text-align: center;
+
+    margin: 10% 0 5% 0;
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+
+    width: 70%;
+    padding: 30px 100px;
+    margin-bottom: 10px;
+
+    background-color: #FFE9F3;
+}
+
+.item-carrinho > p {
+    color: #D4686E;
+    font-size: 16px;
+    
+}
+
+.resultado > p {
+    color: #D4686E;
+    width: 70%;
+    text-align: end;
+    margin-top: 15px;
+}
+
+.fale-conosco {
+    width: 70%;
+    padding: 40px 50px;
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #FFE9F3;
+}
+
+.fale-conosco > h3 {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    color: #D4686E;
+
+    margin: 0 0 5% 0;
+}
+
+.fale-conosco > button {
+    width: 40%;
+
+    padding: 10px 0;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #D4686E;
+    color: #Fff;
+}
+
+@media screen and (max-width: 1260px) {
+    .item-carrinho {
+        width: 90%;
+    }
+
+    .resultado > p {
+        width: 90%;
+    }
+
+    .fale-conosco {
+        width: 90%;
+        
+    }
+}
+
+@media screen and (max-width: 732px) {
+    .resultado > h2 {
+        font-size: 32px;
+        margin: 15% 0 10% 0;
+    }
+    .resultado > p {
+        font-size: 10px;
+    }
+
+    .item-carrinho {
+        padding: 15px 50px;
+    }
+
+    .item-carrinho > p {
+        font-size: 10px;
+    }
+
+    .fale-conosco {
+        padding: 25px;
+        margin-top: 5%;
+    }
+
+    .fale-conosco > button {
+        width: 60%;
+        font-size: 10px;
+    }
+
+    .fale-conosco > h3 {
+        font-size: 16px;
+        margin-bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .item-carrinho {
+        padding: 15px 20px;
+    }
+
+    .fale-conosco > h3 {
+        font-size: 12px;
+        margin-bottom: 10%;
+    }
+
+    .fale-conosco > button {
+        width: 80%;
+        font-size: 10px;
+        padding: 5px 5px;
+    }
+}

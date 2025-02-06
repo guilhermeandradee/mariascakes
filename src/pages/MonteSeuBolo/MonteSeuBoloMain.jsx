@@ -2,6 +2,7 @@ import { useState } from "react"
 import '../../styles/cobertura.css'
 import '../../styles/add-decoracao.css'
 import '../../styles/recheios.css'
+import '../../styles/resultado.css'
 
 function MonteSeuBoloMain() {
 
@@ -325,6 +326,34 @@ function MonteSeuBoloMain() {
                                 <p className="m-0 font-spartan">AZUL ANIL</p>
                             </li>
                         </ul>
+                    </div>
+                </section>
+
+                <section className="resultado">
+                    <h2 className="font-poiret">RESULTADO</h2>
+
+                    <div className="item-carrinho">
+                        <p className="font-spartan m-0">TAMANHO</p>
+                        <p className="font-spartan m-0">M</p>
+                        <p className="font-spartan m-0">R$180,00</p>
+                    </div>
+
+                    <div className="item-carrinho">
+                        <p className="font-spartan m-0">TAMANHO</p>
+                        <p className="font-spartan m-0">M</p>
+                        <p className="font-spartan m-0">R$180,00</p>
+                    </div>
+
+                    <div className="item-carrinho">
+                        <p className="font-spartan m-0">TAMANHO</p>
+                        <p className="font-spartan m-0">M</p>
+                        <p className="font-spartan m-0">R$180,00</p>
+                    </div>
+                    <p className="font-spartan">TOTAL: R$180,00</p>
+
+                    <div className="fale-conosco">
+                        <h3 className="font-spartan">FALE CONOSCO E ENCOMENDE O SEU PEDIDO</h3>
+                        <button className="font-spartan">ENTRE EM CONTATO</button>
                     </div>
                 </section>
             </main>
