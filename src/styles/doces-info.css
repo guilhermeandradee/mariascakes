@@ -8,9 +8,10 @@
     color: #55868C;
 
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 300;
 
     margin: 8% 0;
+
 }
 
 
@@ -19,4 +20,24 @@
     height: 55vh;
     object-fit: cover;
     object-position: center center;
+}
+
+@media screen and (max-width: 732px) {
+    .doces-info img {
+        height: 30vh;
+    }
+
+    .doces-info > h2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .doces-info img {
+        height: 15vh;
+    }
+
+    .doces-info > h2 {
+        font-size: 16px;
+    }
 }
