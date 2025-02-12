@@ -1,0 +1,22 @@
+.doces-info {
+    background-color: #D9FFEB;
+
+    padding-top: 5%;
+}
+.doces-info > h2 {
+    text-align: center;
+    color: #55868C;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    margin: 8% 0;
+}
+
+
+.doces-info-foto img {
+    width: 50%;
+    height: 55vh;
+    object-fit: cover;
+    object-position: center center;
+}

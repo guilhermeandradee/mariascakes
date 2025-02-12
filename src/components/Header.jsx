@@ -61,7 +61,7 @@ function Header(){
             <header className="row container-fluid justify-content-between align-items-center bg-smoosh-pink m-0 py-2 py-md-3"
             >
                 <div className="col-lg-2 col-md-3 col-sm-3 col-6">
-                    <img className="img-fluid w-50" src="/public/image.png" alt="Logo da Empresa" />
+                    <img className="img-fluid" src="/public/image.png" alt="Logo da Empresa" />
                 </div>
 
 
@@ -80,7 +80,7 @@ function Header(){
             }}
             >
                 <div className="col-lg-2 col-md-3 col-sm-3 col-6">
-                    <img className="img-fluid w-50" src="/public/image.png" alt="Logo da Empresa" />
+                    <img className="img-fluid" src="/public/image.png" alt="Logo da Empresa" />
                 </div>
 
 

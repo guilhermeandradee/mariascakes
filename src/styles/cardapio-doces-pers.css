@@ -1,0 +1,92 @@
+section.titulo {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+section.titulo a { 
+    color: #D4686E;
+    text-decoration: none;
+}
+
+section.titulo > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.titulo > div::after {
+    display: block;
+    background-color: rgb(216, 216, 216);
+    width: 1000px;
+    height: 1px;
+    content: '';
+    margin: 3%;
+}
+
+section.titulo > h2 {
+    text-align: center;
+
+    font-size: 48px;
+
+    margin: 5% 0 0 0;
+}
+
+section.titulo > p {
+    text-align: center;
+
+    font-size: 16px;
+    width: 40%;
+
+    margin-bottom: 3%;
+}
+
+@media screen and (max-width: 1260px) {
+    section.titulo > h2 {
+        width: 90%;
+    
+    }
+    section.titulo > p {
+    
+        font-size: 16px;
+        width: 80%;
+    
+        margin-bottom: 3%;
+    }
+
+    section.titulo > div::after {
+        width: 85%;
+        margin: 5%;
+    }
+}
+@media screen and (max-width: 732px) {
+    section.titulo > h2 {
+        width: 100%;
+        font-size: 32px;
+
+        margin: 10% 0 0 0;
+    }
+    section.titulo > p {
+    
+        font-size: 10px;
+        width: 80%;
+    
+        margin-bottom: 5%;
+    }
+    section.titulo > div::after {
+        width: 85%;
+        margin: 7%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    section.titulo > h2 {
+        font-size: 24px;
+    }
+    section.titulo > div::after {
+        width: 80%;
+        margin: 10%;
+    }
+}

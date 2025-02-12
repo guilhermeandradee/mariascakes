@@ -3,6 +3,7 @@ import '../../styles/cobertura.css'
 import '../../styles/add-decoracao.css'
 import '../../styles/recheios.css'
 import '../../styles/resultado.css'
+import '../../styles/brigadeiro-superior.css'
 
 function MonteSeuBoloMain() {
 
@@ -261,7 +262,7 @@ function MonteSeuBoloMain() {
                     </div>
                 </section>
 
-                <section className="add-decoracao w-100 mt-5">
+                {/* <section className="add-decoracao w-100 mt-5">
                     <div className="separa-decoracao-esquerda">
                         <h2 className="font-poiret">ADICIONE UMA DECORAÇÃO</h2>
 
@@ -326,6 +327,44 @@ function MonteSeuBoloMain() {
                                 <p className="m-0 font-spartan">AZUL ANIL</p>
                             </li>
                         </ul>
+                    </div>
+                </section> */}
+
+                <section className="brigadeiro-superior">
+                    <h2 className="font-poiret">BRIGADEIRO SUPERIOR</h2>
+                    <p className="font-spartan">SERÃO CALCULADOS A PARTE DE ACORDO COM QUANTIDADE</p>
+                    <div className="brigadeiro-sup-opcoes">
+                        <ul>
+                            <li className="font-spartan">
+                                <div className="box-select"></div>
+                                <p className="m-0">BRIGADEIRO</p>
+                            </li>
+
+                            <li className="font-spartan">
+                                <div className="box-select"></div>
+                                <p className="m-0">BICHO DE PÉ</p>
+                            </li>
+
+                            <li className="font-spartan">
+                                <div className="box-select"></div>
+                                <p className="m-0">BEIJINHO</p>
+                            </li>
+
+                            <li className="font-spartan">
+                                <div className="box-select"></div>
+                                <p className="m-0">NINHO</p>
+                            </li>
+
+                            <li className="font-spartan">
+                                <div className="box-select"></div>
+                                <p className="m-0">BRIGADEIRO DE CHURROS</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="counter">
+                        <img src="/images/remover.png" alt="" />
+                        <div>0</div>
+                        <img src="/images/mais.png" alt="" />
                     </div>
                 </section>
 

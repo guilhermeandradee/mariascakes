@@ -1,0 +1,154 @@
+.brigadeiro-superior {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: #FFE9F3;
+}
+.brigadeiro-superior > h2 {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 5%;
+}
+
+.brigadeiro-superior > p {
+    text-align: center;
+    font-size: 16px;
+    margin: 2% 0 5% 0;
+    color: #D4686E;
+}
+
+.brigadeiro-sup-opcoes {
+    display: flex;
+    justify-content: center;
+}
+
+.brigadeiro-sup-opcoes > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    list-style: none;
+    width: 90%;
+
+    padding-left: 8%;
+}
+.brigadeiro-sup-opcoes > ul > li {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.brigadeiro-sup-opcoes .box-select {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-right: 20px;
+
+    background-color: #FFE9F3;
+}
+
+.brigadeiro-superior > .counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+
+    background-color: #D4686E;
+
+    width: 25%;
+    height: 60px;
+
+    padding: 0 25px;
+    margin: 5%;
+
+    border-radius: 20px;
+}
+.brigadeiro-superior > .counter > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFE9F3;
+
+    border-radius: 15px;
+
+    width: 50%;
+    height: 40px;
+}
+.brigadeiro-superior > .counter img {
+    width: 35px;
+}
+
+@media screen and (max-width: 1260px) {
+    .brigadeiro-superior > .counter {
+        width: 40%;
+    }
+
+    .brigadeiro-superior {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: #FFE9F3;
+}
+}
+
+@media screen and (max-width: 732px) {
+    .brigadeiro-superior > .counter {
+        width: 50%;
+        height: 50px;
+    }
+
+    .brigadeiro-superior > .counter img {
+        width: 25px;
+    }
+
+    .brigadeiro-superior > h2 {
+        font-size: 32px;
+    }
+
+    .brigadeiro-superior > p {
+        font-size: 10px;
+        margin: 2% 0 5% 0;
+    }
+
+    .brigadeiro-sup-opcoes > ul {
+
+        width: 90%;
+    
+        padding-left: 8%;
+    }
+    .brigadeiro-sup-opcoes > ul > li {
+        display: flex;
+        font-size: 10px;
+        width: 50%;
+        margin-bottom: 8px;
+    }
+
+    .brigadeiro-sup-opcoes .box-select {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .brigadeiro-superior > .counter {
+        width: 65%;
+        height: 35px;
+    }
+
+    .brigadeiro-superior > .counter > div {
+        height: 25px;
+        width: 60%;
+    }
+    .brigadeiro-superior > .counter img {
+        width: 25px;
+    }
+
+    .brigadeiro-sup-opcoes > ul {
+
+        width: 100%;
+        padding-left: 12%;
+    }
+}
