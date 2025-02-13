@@ -1,0 +1,131 @@
+.valor-unitario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.valor-unitario > h2 {
+    text-align: center;
+    font-size: 48px;
+    color: #000;
+
+    margin-top: 8%;
+}
+
+.valor-unitario > p {
+    text-align: center;
+
+    margin-bottom: 8%;
+    color: #55868C;
+}
+
+.itens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    width: 90%;
+    gap: 100px;
+}
+
+.itens > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(33% - 100px);
+    /* background-color: red; */
+}
+
+.itens > div img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+    margin-bottom: 20px;
+}
+
+.itens > div > p {
+    font-size: 24px;
+    
+}
+
+@media screen and (max-width: 1260px) {
+    .itens {
+        /* background-color: red; */
+        width: 100%;
+        gap: 50px;
+    }
+
+    .itens > div img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .itens > div > p {
+        font-size: 16px;
+    }
+
+    .valor-unitario > h2 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .itens {
+        gap: 60px;
+    }
+
+    .itens > div img {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .itens {
+        gap: 15px;
+    }
+
+    .itens > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(50% - 60px);
+        /* background-color: red; */
+    }
+
+    .itens > div img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .valor-unitario > h2 {
+        font-size: 24px;
+        margin-top: 10%;
+    }
+    .valor-unitario > p {
+        font-size: 10px;
+        margin-bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .itens {
+        gap: 15px;
+    }
+
+    .itens > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(50% - 15px);
+        /* background-color: red; */
+    }
+
+    .itens > div img {
+        width: 100%;
+        height: 120px;
+    }
+}

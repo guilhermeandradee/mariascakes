@@ -3,6 +3,7 @@ import Header from "../components/Header.jsx"
 import '../styles/cardapio-doces-pers.css'
 import '../styles/kits-prontos.css'
 import '../styles/doces-info.css'
+import '../styles/valor-unitario.css'
 
 function CardapioDocesPersonalizados(){
     return(
@@ -72,6 +73,58 @@ function CardapioDocesPersonalizados(){
                         <img src="/images/sweet.png" alt="" />
                         <img src="/images/morango.png" alt="" />
                     </div>
+
+                    {/* --------- */}
+                    <div className="especificacoes">
+                        <h2 className="font-spartan">CUPCAKES</h2>
+                        <p className="font-spartan">PEDIDO DE 6 EM 6 UNIDADES COM O MESMO RECHEIO</p>
+
+                        <h2>RECHEIOS</h2>
+                        <p className="font-spartan">NINHO, BRIGANACHE AO LEITE E BRIGANACHE BRANCA</p>
+
+                        <h2>BOMBONS E CONES</h2>
+                        <p>BRIGADEIRO, NINHO, BEIJINHO E BRIGADEIRO DE MORANGO (BICHO DE PÉ)</p>
+                    </div>
+
+                </section>
+
+                <section className="valor-unitario">
+                    <h2 className="font-poiret">VALOR UNITÁRIO</h2>
+                    <p className="font-spartan">MONTE SEU PRÓPRIO KIT</p>
+
+                    <div className="itens">
+                        <div>
+                            <img src="/images/sweet.png" alt="" />
+                            <p className="font-spartan m-0">VALOR UNITÁRIO</p>
+                            <p className="font-spartan m-0">R$102,00</p>
+                        </div>
+                        <div>
+                            <img src="/images/sweet.png" alt="" />
+                            <p className="font-spartan m-0">VALOR UNITÁRIO</p>
+                            <p className="font-spartan m-0">R$102,00</p>
+                        </div>
+                        <div>
+                            <img src="/images/sweet.png" alt="" />
+                            <p className="font-spartan m-0">VALOR UNITÁRIO</p>
+                            <p className="font-spartan m-0">R$102,00</p>
+                        </div>
+                        <div>
+                            <img src="/images/sweet.png" alt="" />
+                            <p className="font-spartan m-0">VALOR UNITÁRIO</p>
+                            <p className="font-spartan m-0">R$102,00</p>
+                        </div>
+                        <div>
+                            <img src="/images/sweet.png" alt="" />
+                            <p className="font-spartan m-0">VALOR UNITÁRIO</p>
+                            <p className="font-spartan m-0">R$102,00</p>
+                        </div>
+                        <div>
+                            <img src="/images/sweet.png" alt="" />
+                            <p className="font-spartan m-0">VALOR UNITÁRIO</p>
+                            <p className="font-spartan m-0">R$102,00</p>
+                        </div>
+                    </div>
+
                 </section>
             </main>
         </>
