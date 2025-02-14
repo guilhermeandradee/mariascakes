@@ -47,10 +47,6 @@
         height: 30vh;
     }
 
-    .doces-info {
-        padding: 10% 0;
-    }
-
     .doces-info > h2 {
         font-size: 16px;
     }
@@ -64,6 +60,9 @@
         font-weight: 300;
     
         margin: 4% 0;
+    }
+    .especificacoes h2:first-child {
+        margin-top: 8%;
     }
 }
 

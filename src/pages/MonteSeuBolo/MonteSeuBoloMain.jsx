@@ -390,10 +390,7 @@ function MonteSeuBoloMain() {
                     </div>
                     <p className="font-spartan">TOTAL: R$180,00</p>
 
-                    <div className="fale-conosco">
-                        <h3 className="font-spartan">FALE CONOSCO E ENCOMENDE O SEU PEDIDO</h3>
-                        <button className="font-spartan">ENTRE EM CONTATO</button>
-                    </div>
+                    
                 </section>
             </main>
         </>

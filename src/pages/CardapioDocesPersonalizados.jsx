@@ -69,14 +69,14 @@ function CardapioDocesPersonalizados(){
 
                     <h2 className="font-spartan">PÃO DE MEL DE CASINHA</h2>
 
-                    <div className="doces-info-foto">
+                    <div className="doces-info-foto ">
                         <img src="/images/sweet.png" alt="" />
                         <img src="/images/morango.png" alt="" />
                     </div>
 
                     {/* --------- */}
                     <div className="especificacoes">
-                        <h2 className="font-spartan">CUPCAKES</h2>
+                        <h2 className="font-spartan ">CUPCAKES</h2>
                         <p className="font-spartan">PEDIDO DE 6 EM 6 UNIDADES COM O MESMO RECHEIO</p>
 
                         <h2>RECHEIOS</h2>
@@ -92,7 +92,7 @@ function CardapioDocesPersonalizados(){
                     <h2 className="font-poiret">VALOR UNITÁRIO</h2>
                     <p className="font-spartan">MONTE SEU PRÓPRIO KIT</p>
 
-                    <div className="itens">
+                    <div className="itens mb-5">
                         <div>
                             <img src="/images/sweet.png" alt="" />
                             <p className="font-spartan m-0">VALOR UNITÁRIO</p>
@@ -125,7 +125,12 @@ function CardapioDocesPersonalizados(){
                         </div>
                     </div>
 
+                <div className="fale-conosco">
+                    <h3 className="font-spartan">FALE CONOSCO E ENCOMENDE O SEU PEDIDO</h3>
+                    <button className="font-spartan">ENTRE EM CONTATO</button>
+                </div>
                 </section>
+
             </main>
         </>
     )
