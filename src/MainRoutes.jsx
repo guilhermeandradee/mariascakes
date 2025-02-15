@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import App from "./App";
 import MonteSeuBolo from "./pages/MonteSeuBolo/MonteSeuBolo";
 import CardapioDocesPersonalizados from "./pages/CardapioDocesPersonalizados";
-import PortfolioBolos from "./pages/portfolio/portfolioBolos";
-import PortfolioKits from "./pages/portfolio/PortfolioKits";
+import PortfolioBolos from "./pages/portfolio/portfolioBolos.jsx";
+import PortfolioKits from "./pages/portfolio/PortfolioKits.jsx";
 function MainRoutes() {
     return(
         <Routes>
