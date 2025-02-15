@@ -39,7 +39,7 @@ function Main() {
                 {/*  fotos   */}
                 <div className="row w-100 m-0 d-flex text-light fotos">
                     <figure className="d-flex col-6 col-sm-3 bg-success px-0 m-0"
-                    style={{backgroundImage: 'url(/images/brownie.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                    style={{backgroundImage: 'url(/images/brownie.jpg)', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
                         <div className=" w-10">
                             <p className="m-0  font-spartan text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
                         </div>
