@@ -2,6 +2,8 @@ import { AppContext } from "../contexts/windowSizeContext"
 import { useContext, useState } from "react"
 import HamMenu from "./HamMenu.jsx";
 
+import '../styles/main.css'
+
 function Main() {
 
     const { isMobileView, setIsMobileView } = useContext(AppContext);
@@ -12,75 +14,70 @@ function Main() {
 
     return(
         <>
-            <main className="position-relative" style={{overflow: 'hidden'}} >
+            <main className="" style={{overflow: 'hidden'}} >
 
                 {/* primeiro elemento */}
                 <div 
-                className="d-flex flex-column pt-5 px-3 px-md-5 pb-5" 
-                
-                style={{
-                    backgroundImage: "url(/backgoundimage.jpg)",
-                    backgroundSize: 'cover',
-                    // minHeight: isMobileView ? '60vh' : '85vh' 
-                    
-                    }}>
+                className="d-flex flex-column banner-img">
 
-                    <h1 className="font-title col-sm-5 col-12 mt-5">Receitas Gourmet com Chocolate de Primeira Qualidade</h1>
+                    <h1 className="font-poiret mt-5">Receitas Gourmet com Chocolate de Primeira Qualidade</h1>
 
-                    <button className="font-subtitle font-w-normal border-0 bg-accent text-light mb-5 py-2 d-flex align-items-center justify-content-center mt-4 font-s-small col-sm-3 col-6"><p className="m-0 mt-1">VER BOLOS</p></button>
+                    <button className="font-spartan font-w-normal border-0 bg-accent text-light mb-5 d-flex align-items-center justify-content-center mt-4 font-s-small "><p className="m-0 mt-1">VER BOLOS</p></button>
 
                 </div>
 
                 {/* menu ham */}
                 <HamMenu/>
                 
-                <div className="d-flex flex-column justify-content-center align-items-center mt-5 px-3 px-md-5 mb-5">
-                    <h2 className="font-title col-sm-8 col-12 text-center mt-sm-5 mt-3">OS MELHORES BOLOS COM OS MELHORES INGREDIENTES DO MERCADO</h2>
-                    <p className="pt-sm-5 pt-3 text-center col-sm-6 col-11 color-subtitle font-s-subtitle">CHOCOLATE NOBRE DE ALTÍSSIMA QUALIDADE, RECEHEIOS FEITOS À MÃO NO DIA DO PREPARO</p>
+                <div className="d-flex flex-column justify-content-center align-items-center px-3 px-md-5 melhores-bolos ">
+                    <h2 className="font-title col-sm-8 col-12 text-center">OS MELHORES BOLOS COM OS MELHORES INGREDIENTES DO MERCADO</h2>
+                    <p className="text-center col-sm-6 col-11 color-subtitle font-s-subtitle">CHOCOLATE NOBRE DE ALTÍSSIMA QUALIDADE, RECEHEIOS FEITOS À MÃO NO DIA DO PREPARO</p>
+
+                    <img src="/images/fundo2.jpg" alt="" />
                 </div>
 
                 {/*  fotos   */}
-                <div className="row w-100 m-0 d-flex text-light">
-                    <figure className="d-flex col-6 col-sm-3 bg-success px-0 preencher-div m-0"
+                <div className="row w-100 m-0 d-flex text-light fotos">
+                    <figure className="d-flex col-6 col-sm-3 bg-success px-0 m-0"
                     style={{backgroundImage: 'url(/images/brownie.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                        <div className="bg-dark-blue w-100 p-2 py-md-3">
-                            <p className="m-0  font-s-small text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
+                        <div className=" w-10">
+                            <p className="m-0  font-spartan text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
                         </div>
                     </figure>
                     
                     
                     <figure className=" col-6 col-sm-3 bg-success px-0 m-0"
-                    style={{backgroundImage: 'url(/images/brownie.jpg)',
+                    style={{backgroundImage: 'url(/images/kitkat.jpg)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}>
-                        <div className="bg-dark-blue w-100 p-2 py-md-3">
-                            <p className="m-0  font-s-small text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
+                        <div className="bg-dark-blue w-100">
+                            <p className="m-0  font-spartan text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
                         </div>
                     </figure>
 
 
-                    <figure className=" col-6 col-sm-3 bg-success px-0 preencher-div m-0"
+                    <figure className=" col-6 col-sm-3 bg-success px-0 m-0"
                     style={{backgroundImage: 'url(/images/brownie.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
-                        <div className="bg-dark-blue w-100 p-2 py-md-3">
-                            <p className="m-0  font-s-small text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
+                        <div className="bg-dark-blue w-100">
+                            <p className="m-0  font-spartan text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
                         </div>
                     </figure>
 
 
                     <figure className=" col-6 col-sm-3 bg-success px-0 m-0"
-                    style={{backgroundImage: 'url(/images/brownie.jpg)',
+                    style={{backgroundImage: 'url(/images/cupcake.png)',
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center',
+                        backgroundPosition: ' center',
                     }}>
-                        <div className="bg-dark-blue w-100 p-2 py-md-3">
-                            <p className="m-0  font-s-small text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
+                        <div className="bg-dark-blue w-100">
+                            <p className="m-0  font-spartan text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
                         </div>
                     </figure>
                 </div>
 
                 {/* Alguns feedbacks */}
-                <div className="bg-light-pink pt-5">
+                <div className=" pt-5">
                     <h2 className="font-title text-center mt-3 mt-md-5 mb-5">ALGUNS FEEDBACKS</h2>
 
                     <blockquote className="row px-3 pt-sm-5 px-md-5 justify-content-center m-0 text-light w-100 ">
