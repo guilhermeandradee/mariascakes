@@ -1,6 +1,6 @@
 import '../../styles/portfolio-bolos.css'
 import Header from "../../components/Header.jsx"
-function PortfolioBolos(){
+function portfolioBolos(){
     return(
         <>
             <Header/>
@@ -24,4 +24,4 @@ function PortfolioBolos(){
     )
 }
 
-export default PortfolioBolos
+export default portfolioBolos
