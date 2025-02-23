@@ -58,31 +58,15 @@ function Header(){
 
     return(
         <>
-            <header className="row container-fluid justify-content-between align-items-center bg-smoosh-pink m-0 py-2 py-md-3"
-            >
-                <div className="col-lg-2 col-md-3 col-sm-3 col-6">
-                    <img className="img-fluid" src="/public/image.png" alt="Logo da Empresa" />
-                </div>
-
-
-                {menuToBeShown()}
-                
-
-                
-            </header>
-
-            <header className="row container-fluid justify-content-between align-items-center bg-smoosh-pink m-0 py-2 py-md-3"
+            <header className="row container-fluid justify-content-between align-items-center m-0 font-spartan"
             style={{
-                position: 'fixed',
-                top: '0',
-                left: '0',
-                zIndex: '100'
+                backgroundImage: 'url(images/fundo-rosa.jpg)'
             }}
             >
                 <div className="col-lg-2 col-md-3 col-sm-3 col-6">
                     <img className="img-fluid" src="/public/image.png" alt="Logo da Empresa" />
                 </div>
-
+            
 
                 {menuToBeShown()}
                 

@@ -3,30 +3,78 @@ main {
 }
 
 .banner-img {
-    background-image: url(/images/backgoundimage.jpg);
+    background-image: url(/images/fundo-rosa.jpg);
     background-size: cover;
 }
 
-.banner-img {
-    height: 90vh;
-    align-items: start;
-    justify-content: center;
 
-    padding: 5%;
+.banner-img {
+    display: flex;
+    
+
+    height: 90vh;
+    padding: 3% 0 0 3%;
+    
 }
 
-.banner-img > h1 {
-    font-size: 52px;
-
+.hero-div {
     width: 50%;
 }
 
-.banner-img > button {
-    width: 25%;
+.img-div {
+    width: 50%;
 
-    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-    font-size: 16px;
+}
+.banner-img > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner-img div > h1 {
+    font-size: 48px;
+
+    /* width: 50%; */
+}
+.banner-img div > h1 > span {
+    color: #D4686E;
+}
+
+.ver-bolos {
+    width: 100%;
+    display: flex;
+
+    margin-top: 10%;
+}
+
+.banner-img .ver-bolos button {
+    width: 30%;
+    border-radius: 10px;
+
+    padding: 12px 0;
+
+    font-size: 15px;
+
+}
+.banner-img .ver-bolos button:first-child {
+    background-color: #D4686E;
+    
+    color: #fff;
+
+    border: none;
+
+    margin-right: 20px;
+}
+.banner-img .ver-bolos button:last-child {
+    background-color: transparent;
+
+    color: #D4686E;
+    border: 2px solid #D4686E;
+
+    margin-right: 20px;
 }
 
 .melhores-bolos {

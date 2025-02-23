@@ -18,11 +18,23 @@ function Main() {
 
                 {/* primeiro elemento */}
                 <div 
-                className="d-flex flex-column banner-img">
+                className="d-flex banner-img">
 
-                    <h1 className="font-poiret mt-5">Receitas Gourmet com Chocolate de Primeira Qualidade</h1>
+                    <div className="hero-div">
+                        <p className="font-spartan">Cada doce é personalizado e único, feito sob medida para o seu tema</p>
+                        <h1 className="font-poiret">CRIE <span>EXPERIÊNCIAS MEMORÁVEIS</span> COM PESSOAS QUE VOCÊ AMA</h1>
+                        <p className="font-spartan">Fazemos bolos e doces de qualquer tema escolhido por você, desde festas infantis, times de futebol à festas empresariais</p>
 
-                    <button className="font-spartan font-w-normal border-0 bg-accent text-light mb-5 d-flex align-items-center justify-content-center mt-4 font-s-small "><p className="m-0 mt-1">VER BOLOS</p></button>
+                        <div className="ver-bolos">
+                            <button className="font-spartan font-w-normal"><p className="m-0 mt-1">VER BOLOS</p>
+                            </button>
+
+                            <button>ENTRE EM CONTATO</button>
+                        </div>
+                    </div>
+                    <div className="img-div">
+                        <img src="images/bolo-background.jpg" alt="" />
+                    </div>
 
                 </div>
 
