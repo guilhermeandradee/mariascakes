@@ -12,13 +12,18 @@ main {
     display: flex;
     
 
-    height: 90vh;
-    padding: 3% 0 0 3%;
+    min-height: 90vh;
+    padding: 0 0 3% 3%;
     
 }
 
 .hero-div {
     width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .img-div {
@@ -26,21 +31,23 @@ main {
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 
 }
-.banner-img > img {
+.banner-img img {
     width: 100%;
     object-fit: cover;
 }
 
 .banner-img div > h1 {
     font-size: 48px;
-
-    /* width: 50%; */
 }
 .banner-img div > h1 > span {
     color: #D4686E;
+}
+
+.banner-img div > p {
+    font-size: 20px;
 }
 
 .ver-bolos {
@@ -76,6 +83,8 @@ main {
 
     margin-right: 20px;
 }
+
+/* ---------- ---------------- */
 
 .melhores-bolos {
     /* margin: 10% 0; */
@@ -131,24 +140,19 @@ main {
 @media screen and (max-width: 1260px) {
     /* banner */
 
-    .banner-img {
-        height: 85vh;
-        padding: 3%;
-        
-        background-position: center;
+    .banner-img .hero-div h1 {
+        font-size: 32px;
+    }
+    .banner-img div > p {
+        font-size: 16px;
     }
 
-    .banner-img > h1 {
-        font-size: 52px;
+    .banner-img .hero-div button {
+        width: 40%;
     
-        width: 70%;
     }
 
-    .banner-img > button {
-        width: 30%;
-    
-        padding: 15px 0;
-    }
+    /* --------------------------- */
 
     .fotos > figure p {
         font-size: 10px;
@@ -157,6 +161,22 @@ main {
 }
 
 @media screen and (max-width: 950px) {
+    .banner-img .hero-div h1 {
+        font-size: 24px;
+    }
+    .banner-img .hero-div p {
+        font-size: 12px;
+    }
+
+    .banner-img .hero-div button {
+        width: 40%;
+    
+    }
+    .hero-div .ver-bolos button {
+        font-size: 12px;
+        
+    }
+
     .fotos > figure { 
         height: 40vh;
     }
@@ -168,10 +188,17 @@ main {
 
 @media screen and (max-width: 732px) {
     .banner-img {
-        height: 70vh;
-        padding: 3%;
-        background-position: center;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+
+        width: 100%;
+
     }
+
+    .hero-div, .img-div {
+        width: 100%;
+    }
+    
 
     .banner-img > h1 {
         font-size: 48px;
@@ -190,6 +217,19 @@ main {
 }
 
 @media screen and (max-width: 560px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFE9F3;
+        background-image: url(images/fundo-rosa.jpg)
+    }
+    .banner-img {
+        width: 100%;
+        min-height: 80vh;
+
+    }
+
     .banner-img {
         height: 50vh;
         padding: 3%;
@@ -198,15 +238,23 @@ main {
         align-items: center;
     }
 
-    .banner-img > h1 {
-        font-size: 32px;
-        text-align: center;
-        width: 100%;
+    .banner-img .hero-div h1 {
+        font-size: 6vw;
+
+    }
+    .banner-img .hero-div p {
+        font-size: 3vw;
+
     }
 
-    .banner-img > button {
+    .banner-img .ver-bolos {
+        display: flex;
+        align-items: center;
+    }
+
+    .banner-img .ver-bolos button {
         width: 70%;
-        padding: 6px 0;
+        padding: 10px 0;
 
         font-size: 10px;
     }

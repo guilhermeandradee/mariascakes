@@ -26,7 +26,7 @@ function Main() {
                         <p className="font-spartan">Fazemos bolos e doces de qualquer tema escolhido por você, desde festas infantis, times de futebol à festas empresariais</p>
 
                         <div className="ver-bolos">
-                            <button className="font-spartan font-w-normal"><p className="m-0 mt-1">VER BOLOS</p>
+                            <button className="font-spartan font-w-normal">VER BOLOS
                             </button>
 
                             <button>ENTRE EM CONTATO</button>
