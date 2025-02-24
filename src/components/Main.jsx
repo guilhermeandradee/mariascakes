@@ -21,9 +21,9 @@ function Main() {
                 className="d-flex banner-img">
 
                     <div className="hero-div">
-                        <p className="font-spartan">Cada doce é personalizado e único, feito sob medida para o seu tema</p>
+                        <p className="font-spartan m-0">Cada doce é personalizado e único, feito sob medida para o seu tema</p>
                         <h1 className="font-poiret">CRIE <span>EXPERIÊNCIAS MEMORÁVEIS</span> COM PESSOAS QUE VOCÊ AMA</h1>
-                        <p className="font-spartan">Fazemos bolos e doces de qualquer tema escolhido por você, desde festas infantis, times de futebol à festas empresariais</p>
+                        <p className="font-spartan m-0">Fazemos bolos e doces de qualquer tema escolhido por você, desde festas infantis, times de futebol à festas empresariais</p>
 
                         <div className="ver-bolos">
                             <button className="font-spartan font-w-normal">VER BOLOS
@@ -41,12 +41,14 @@ function Main() {
                 {/* menu ham */}
                 <HamMenu/>
                 
-                <div className="d-flex flex-column justify-content-center align-items-center px-3 px-md-5 melhores-bolos ">
-                    <h2 className="font-title col-sm-8 col-12 text-center">OS MELHORES BOLOS COM OS MELHORES INGREDIENTES DO MERCADO</h2>
-                    <p className="text-center col-sm-6 col-11 color-subtitle font-s-subtitle">CHOCOLATE NOBRE DE ALTÍSSIMA QUALIDADE, RECEHEIOS FEITOS À MÃO NO DIA DO PREPARO</p>
-
-                    <img src="/images/fundo2.jpg" alt="" />
-                </div>
+                <section className="melhores-bolos">
+                    <div id="img-chocolate">
+                    </div>
+                    <div id="text-melhores-bolos">
+                        <h2 className="font-poiret">UTILIZAMOS OS <span>MELHORES INGREDIENTES</span> DO MERCADO</h2>
+                        <p className=" font-spartan">CHOCOLATE NOBRE DE ALTÍSSIMA QUALIDADE, RECHEIOS FEITOS À MÃO NO DIA DO PREPARO</p>
+                    </div>
+                </section>
 
                 {/*  fotos   */}
                 <div className="row w-100 m-0 d-flex text-light fotos">

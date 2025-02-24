@@ -3,7 +3,7 @@ main {
 }
 
 .banner-img {
-    background-image: url(/images/fundo-rosa.jpg);
+    background-color: #FFE9F3;
     background-size: cover;
 }
 
@@ -12,7 +12,7 @@ main {
     display: flex;
     
 
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 0 0 3% 3%;
     
 }
@@ -84,34 +84,48 @@ main {
     margin-right: 20px;
 }
 
-/* ---------- ---------------- */
+/* ---------- melhores bolos ---------------- */
 
 .melhores-bolos {
-    /* margin: 10% 0; */
-    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    position: relative !important;
-    box-shadow: 1px 0px 15px inset rgba(0, 0, 0, 0.548);
-}
-.melhores-bolos h2 {
-    margin: 5% 0;
-}
-.melhores-bolos h2, p {
-    z-index: 1;
-}
-.melhores-bolos > img {
-    position: absolute;
-    opacity: .6;
+    min-height: 100vh;
     width: 100%;
-    height: 100%;
 
-    top: 0;
-    left: 0;
-
-    object-fit: fill;
+    /* box-shadow: 1px 0px 15px inset rgba(0, 0, 0, 0.548); */
+    background-color: #D9FFEB;
 }
 
-/*  imagens ---------   */
+#img-chocolate {
+    background-image: url(images/chocolate.jpg);
+    width: 80%;
+    height: 50vh;
+
+    border-radius: 0 0 20px 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.548);
+}
+
+#text-melhores-bolos {
+    width: 80%;
+
+    margin-top: 5vw;
+}
+
+#text-melhores-bolos span {
+    color: #55868C;
+}
+#text-melhores-bolos > h2 {
+    font-size: 3vw;
+}
+#text-melhores-bolos > p {
+    color: #55868C;
+    font-size: 1vw;
+    margin-top: 1rem;
+}
+
+/* ---------- imagens ---------   */
 .fotos > figure { 
     height: 50vh;
 }
@@ -158,6 +172,21 @@ main {
         font-size: 10px;
         font-weight: 400;
     } 
+
+    /* -------- melhores bolos --------- */
+    .melhores-bolos {
+        min-height: 85vh;
+    }
+
+
+    #text-melhores-bolos > h2 {
+        font-size: 3vw;
+    }
+    #text-melhores-bolos > p {
+        color: #55868C;
+        font-size: 1vw;
+        margin-top: 1rem;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -180,9 +209,15 @@ main {
     .fotos > figure { 
         height: 40vh;
     }
-    .melhores-bolos h2 {
-        width: 100%;
-        margin: 8%;
+
+    /*      melhores bolos        */
+    #text-melhores-bolos > h2 {
+        font-size: 5vw;
+    }
+    #text-melhores-bolos > p {
+        color: #55868C;
+        font-size: 2vw;
+        margin-top: 1rem;
     }
 }
 
@@ -222,17 +257,13 @@ main {
         flex-direction: column;
         align-items: center;
         background-color: #FFE9F3;
-        background-image: url(images/fundo-rosa.jpg)
+        /* background-image: url(images/fundo-rosa.jpg) */
     }
+
     .banner-img {
         width: 100%;
-        min-height: 80vh;
-
-    }
-
-    .banner-img {
-        height: 50vh;
-        padding: 3%;
+        min-height: 60vh;
+        padding: 3% 0 3% 3%;
         background-position: center;
 
         align-items: center;
@@ -240,7 +271,7 @@ main {
 
     .banner-img .hero-div h1 {
         font-size: 6vw;
-
+        margin: 3vw 0;
     }
     .banner-img .hero-div p {
         font-size: 3vw;
@@ -255,6 +286,7 @@ main {
     .banner-img .ver-bolos button {
         width: 70%;
         padding: 10px 0;
+        margin-bottom: 1rem;
 
         font-size: 10px;
     }
@@ -267,6 +299,20 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: end;
+    }
+
+    .melhores-bolos {
+        min-height: 50vh;
+    }
+
+
+    #text-melhores-bolos > h2 {
+        font-size: 5vw;
+    }
+    #text-melhores-bolos > p {
+        color: #55868C;
+        font-size: 2.5vw;
+        margin-top: 1rem;
     }
     
 }
