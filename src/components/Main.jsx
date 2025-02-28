@@ -21,20 +21,17 @@ function Main() {
                 className="d-flex banner-img">
 
                     <div className="hero-div">
-                        <p className="font-spartan m-0">Cada doce é personalizado e único, feito sob medida para o seu tema</p>
-                        <h1 className="font-poiret">CRIE <span>EXPERIÊNCIAS MEMORÁVEIS</span> COM PESSOAS QUE VOCÊ AMA</h1>
-                        <p className="font-spartan m-0">Fazemos bolos e doces de qualquer tema escolhido por você, desde festas infantis, times de futebol à festas empresariais</p>
+                        <div>
+                            <h1 className="font-poiret">Sabores Que Marcam Momentos</h1>
+                            <p className="font-poiret">Cada doce é único, feito para tornar sua celebração inesquecível.</p>
 
-                        <div className="ver-bolos">
-                            <button className="font-spartan font-w-normal">VER BOLOS
-                            </button>
-
-                            <button>ENTRE EM CONTATO</button>
                         </div>
+                            <div className="button-container">
+                                <button>Monte Seu Bolo</button>
+                                <button>Entre Em Contato</button>
+                            </div>
                     </div>
-                    <div className="img-div">
-                        <img src="images/bolo-background.jpg" alt="" />
-                    </div>
+                    <img src="/images/header-bg.png" alt="" />
 
                 </div>
 
@@ -45,8 +42,10 @@ function Main() {
                     <div id="img-chocolate">
                     </div>
                     <div id="text-melhores-bolos">
-                        <h2 className="font-poiret">UTILIZAMOS OS <span>MELHORES INGREDIENTES</span> DO MERCADO</h2>
-                        <p className=" font-spartan">CHOCOLATE NOBRE DE ALTÍSSIMA QUALIDADE, RECHEIOS FEITOS À MÃO NO DIA DO PREPARO</p>
+                        <h2 className="font-poiret">Recheios feitos com os melhores ingredientes para um sabor impecável.</h2>
+                        <p className=" font-spartan">Chocolate nobre e técnicas refinadas para um doce perfeito.</p>
+                    </div>
+                    <div id="img-chocolate2">
                     </div>
                 </section>
 
