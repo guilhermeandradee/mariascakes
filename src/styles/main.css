@@ -7,7 +7,7 @@ main {
 
     width: 100%;
     display: flex;
-    height: 85vw;
+    height: clamp( 85vh, 100%, 100vh);
     max-height: 100vh;
 }
 
@@ -171,13 +171,6 @@ main {
 @media screen and (max-width: 1260px) {
     /* banner */
 
-    .banner-img .hero-div h1 {
-
-    }
-    .banner-img div > p {
-
-    }
-
     .banner-img .hero-div button {
         width: 40%;
     
@@ -193,13 +186,6 @@ main {
     /* -------- melhores bolos --------- */
     .melhores-bolos {
         min-height: 85vh;
-    }
-
-
-    #text-melhores-bolos > h2 {
-
-    }
-    #text-melhores-bolos > p {
     }
 }
 
@@ -229,7 +215,6 @@ main {
         /* font-size: 5vw; */
     }
     #text-melhores-bolos > p {
-        color: #55868C;
         /* font-size: 2vw; */
         margin-top: 1rem;
     }
@@ -238,26 +223,43 @@ main {
 @media screen and (max-width: 732px) {
     .banner-img {
         flex-direction: column-reverse;
-        justify-content: flex-end;
+        justify-content: flex-start;
+        background-color: red;
 
-        width: 100%;
-
+        
     }
 
-    .hero-div, .img-div {
+    .hero-div{
         width: 100%;
+        text-align: center;
+    }
+
+    .banner-img img {
+        width: 100%;
+        height: 40vh;
+        /* transform: rotate(90deg); */
     }
     
 
     .banner-img > h1 {
         /* font-size: 48px; */
-    
         width: 90%;
     }
 
-    .banner-img > button {
-        width: 50%;
-        padding: 10px 0;
+    .button-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        margin-top: clamp(55px, 8vh, 300px);
+        margin-bottom: clamp(200px, 5vh, 300px);
+    }
+    .button-container button {
+        font-size: 12px;
+        margin-right: 0 !important;
+        margin-bottom: 5%;
+        width: 80% !important;
+        padding: 15px 0;
     }
 
     #img-chocolate {
@@ -287,19 +289,14 @@ main {
     .banner-img {
         width: 100%;
         min-height: 60vh;
-        padding: 3% 0 3% 3%;
+        padding: 0;
         background-position: center;
 
         align-items: center;
     }
 
     .banner-img .hero-div h1 {
-        font-size: 6vw;
         margin: 3vw 0;
-    }
-    .banner-img .hero-div p {
-        font-size: 3vw;
-
     }
 
     .banner-img .ver-bolos {
@@ -310,9 +307,6 @@ main {
     .banner-img .ver-bolos button {
         width: 70%;
         padding: 10px 0;
-        margin-bottom: 1rem;
-
-        font-size: 10px;
     }
 
     .fotos > figure { 
@@ -325,17 +319,7 @@ main {
         justify-content: end;
     }
 
-    .melhores-bolos {
-        min-height: 50vh;
-    }
-
-
-    #text-melhores-bolos > h2 {
-        /* font-size: 5vw; */
-    }
     #text-melhores-bolos > p {
-        color: #55868C;
-        /* font-size: 2.5vw; */
         margin-top: 1rem;
     }
     
