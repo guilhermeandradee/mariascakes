@@ -60,7 +60,7 @@ function Header(){
         <>
             <header className="row container-fluid justify-content-between align-items-center m-0 font-spartan"
             style={{
-                backgroundImage: 'url(images/fundo-rosa.jpg)'
+                backgroundColor: '#FFE9F3'
             }}
             >
                 <div className="col-lg-2 col-md-3 col-sm-3 col-6">

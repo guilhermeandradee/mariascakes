@@ -54,83 +54,53 @@ function Main() {
                     <figure className="d-flex col-6 col-sm-3 bg-success px-0 m-0"
                     style={{backgroundImage: 'url(/images/brownie.jpg)', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
                         <div className=" w-10">
-                            <p className="m-0  font-spartan text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
+                            <p className="m-0  font-spartan text-center">Bolos com recheios incríveis</p>
                         </div>
                     </figure>
                     
                     
-                    <figure className=" col-6 col-sm-3 bg-success px-0 m-0"
+                    <figure className="d-flex col-6 col-sm-3 bg-success px-0 m-0"
                     style={{backgroundImage: 'url(/images/kitkat.jpg)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}>
                         <div className="bg-dark-blue w-100">
-                            <p className="m-0  font-spartan text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
+                            <p className="m-0  font-spartan text-center"> Docinhos cheios de sabor</p>
                         </div>
                     </figure>
 
 
-                    <figure className=" col-6 col-sm-3 bg-success px-0 m-0"
+                    <figure className="d-flex col-6 col-sm-3 bg-success px-0 m-0"
                     style={{backgroundImage: 'url(/images/brownie.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
                         <div className="bg-dark-blue w-100">
-                            <p className="m-0  font-spartan text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
+                            <p className="m-0  font-spartan text-center">Cupcakes macios e deliciosos</p>
                         </div>
                     </figure>
 
 
-                    <figure className=" col-6 col-sm-3 bg-success px-0 m-0"
+                    <figure className="d-flex col-6 col-sm-3 bg-success px-0 m-0"
                     style={{backgroundImage: 'url(/images/cupcake.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: ' center',
                     }}>
                         <div className="bg-dark-blue w-100">
-                            <p className="m-0  font-spartan text-center">BOLOS COM RECHEIOS MAGNÍFICOS</p>
+                            <p className="m-0  font-spartan text-center">Brigadeiros irresistíveis</p>
                         </div>
                     </figure>
                 </div>
 
                 {/* Alguns feedbacks */}
-                <div className=" pt-5">
-                    <h2 className="font-title text-center mt-3 mt-md-5 mb-5">ALGUNS FEEDBACKS</h2>
+                <div className=" pt-5 feedback pb-5">
+                    <h2 className="font-poiret text-center">100% DE SATISFAÇÃO DOS CLIENTES</h2>
+                    <p className="text-center font-spartan m-0">VENHA SER NOSSA PRÓXIMA AVALIAÇÃO</p>
+                    <div className="text-center">★★★★★</div>
 
-                    <blockquote className="row px-3 pt-sm-5 px-md-5 justify-content-center m-0 text-light w-100 ">
-
-                        <div className="col-md-3 col-sm-5 col-9 d-flex flex-column align-items-center justify-content-center bg-accent rounded-4 p-4 mx-md-4 mx-sm-3 mb-5">
-
-                            <div className="bg-light-pink rounded-circle mb-4 feedback-circle"
-                            
-                            ></div>
-
-                            <h3 className="font-subtitle font-feedback-title w-100">MARIA ANTONIA</h3>
-
-                            <p className="mb-0 w-100 ">Bolos muito bonitos e saboros, vale muito a pena</p>
-                        </div>
-
-
-                        <div className="col-md-3 col-sm-5 col-9 d-flex flex-column align-items-center justify-content-center bg-accent rounded-4 p-4 mx-md-4 mx-sm-3 mb-5">
-
-                            <div className="bg-light-pink rounded-circle mb-4 feedback-circle"
-                            
-                            ></div>
-
-                            <h3 className="font-subtitle font-feedback-title w-100">MARIA ANTONIA</h3>
-
-                            <p className="mb-0 w-100 ">Bolos muito bonitos e saboros, vale muito a pena</p>
-                        </div>
-
-
-
-                        <div className="col-md-3 col-sm-5 col-9 d-flex flex-column align-items-center justify-content-center bg-accent rounded-4 p-4 mx-md-4 mx-sm-3 mb-5">
-
-                            <div className="bg-light-pink rounded-circle mb-4 feedback-circle"
-                            
-                            ></div>
-
-                            <h3 className="font-subtitle font-feedback-title w-100">MARIA ANTONIA</h3>
-
-                            <p className="mb-0 w-100 ">Bolos muito bonitos e saboros, vale muito a pena</p>
-                        </div>
-                    </blockquote>
+                    <div className="feedback-images mt-5">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
                 
                 {/* Silmulação de valor */}
