@@ -20,7 +20,7 @@ main {
     justify-content: space-between;
 
     background-color: #FFE9F3;
-    background-image: url(images/pattern1.png);
+    background-image: url(/images/pattern1.png);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
@@ -45,13 +45,13 @@ main {
 }
 
 .banner-img div > h1 {
-    font-size: clamp(24px, 4vw, 62px);
+    font-size: clamp(26px, 4vw, 62px);
     color: #D4686E;
 }
 
 
 .banner-img div > p {
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: clamp(16px, 2vw, 20px);
     color: #D4686E;
 }
 
@@ -74,7 +74,7 @@ main {
 }
 
 .imagem-separacao {
-    background-image: url(images/pattern1.png);
+    background-image: url(/images/pattern1.png);
     background-position: bottom center;
     background-size: cover;
     width: 100%;
@@ -96,7 +96,7 @@ main {
 }
 
 #img-chocolate {
-    background-image: url(images/chocolate.jpg);
+    background-image: url(/public/images/chocolate.jpg);
     background-repeat: repeat;
     width: 80%;
     height: 50vh;
@@ -106,7 +106,7 @@ main {
 }
 
 #img-chocolate2 {
-    background-image: url(images/chocolate.jpg);
+    background-image: url(/images/chocolate.jpg);
     background-repeat: repeat;
     width: 80%;
     height: 30vh;
@@ -128,7 +128,7 @@ main {
 }
 
 #text-melhores-bolos > h2 {
-    font-size: clamp(16px, 4vw, 48px);
+    font-size: clamp(20px, 4vw, 48px);
     text-align: center;
 
     width: 90%;
@@ -176,7 +176,7 @@ main {
     min-height: 100vh;
 }
 .feedback > h2 {
-    font-size: clamp(16px, 4vw, 48px);
+    font-size: clamp(20px, 4vw, 48px);
     /* width: 90%; */
     text-align: center;
 }
@@ -205,7 +205,7 @@ main {
     width: 20%;
     height: 15vw;
     min-width: 100px;
-    background-image: url(images/kitkat.jpg);
+    background-image: url(/images/kitkat.jpg);
     background-size: cover;
 
     border-radius: 5px;
@@ -224,7 +224,7 @@ main {
     min-height: 100vh;
     padding-top: 10vw;
 
-    background-image: url(images/fundo-bolinha.png);
+    background-image: url(/images/fundo-bolinha.png);
     background-position: center center;
     background-size: cover;
 }
@@ -285,10 +285,8 @@ main {
 
     /*      melhores bolos        */
     #text-melhores-bolos > h2 {
-        /* font-size: 5vw; */
     }
     #text-melhores-bolos > p {
-        /* font-size: 2vw; */
         margin-top: 1rem;
     }
 }
@@ -310,13 +308,12 @@ main {
     .banner-img img {
         width: 100%;
         height: 40vh;
-        /* transform: rotate(90deg); */
     }
     
 
     .banner-img > h1 {
         /* font-size: 48px; */
-        width: 90%;
+        width: 100%;
     }
 
     .button-container {

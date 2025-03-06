@@ -44,12 +44,12 @@ function Header(){
         } else if(!isMobileView){
             return (
                 <nav className="col-8 d-flex justify-content-end align-items-center py-2">
-                    <ul className="d-flex list-unstyled align-items-center justify-content-end m-0 w-100 font-header">
-                        <li className="me-4 ">HOME</li>
-                        <li className="me-4 ">MONTE SEU BOLO</li>
-                        <li className="me-4 ">KITS</li>
-                        <li className="me-4 ">DOCES PERSONALIZADOS</li>
-                        <li className="me-4 ">PORTFOLIOS</li>
+                    <ul className="d-flex list-unstyled align-items-center justify-content-end m-0 w-100 font-header header-menu">
+                        <li className="me-4 font-spartan">HOME</li>
+                        <li className="me-4 font-spartan">MONTE SEU BOLO</li>
+                        <li className="me-4 font-spartan">KITS</li>
+                        <li className="me-4 font-spartan">DOCES PERSONALIZADOS</li>
+                        <li className="me-4 font-spartan">PORTFOLIOS</li>
                     </ul>
                 </nav>
             )

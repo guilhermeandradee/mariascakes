@@ -29,14 +29,14 @@
     rotate(-45deg);
 }
 
-header {
-}
-
-
 header div img {
     width: 80px;
 }
 
+.header-menu li {
+    font-size: clamp(12px, 50%, 16px);
+
+}
 @media screen and (max-width: 1260px) {
     header div img {
         width: 60px;

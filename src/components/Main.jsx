@@ -31,7 +31,7 @@ function Main() {
                                 <button>Entre Em Contato</button>
                             </div>
                     </div>
-                    <img src="/images/header-bg.png" alt="" />
+                    <img src="/images/header-bg.png" alt="imagem ilustrativa de bolos personailzados" />
 
                 </div>
 
