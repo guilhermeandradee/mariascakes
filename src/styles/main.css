@@ -173,13 +173,12 @@ main {
     color: #D4686E;
     background-color: #FFE9F3;
     width: 100%;
-    /* min-height: 100vh; */
+    min-height: 100vh;
 }
 .feedback > h2 {
     font-size: clamp(16px, 4vw, 48px);
     /* width: 90%; */
     text-align: center;
-    
 }
 
 .feedback > p {
@@ -211,6 +210,30 @@ main {
 
     border-radius: 5px;
 }
+.vetorrosa {
+    width: 100%;
+    margin-top: -.3rem;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.CTO {
+    position: relative;
+
+    min-height: 100vh;
+    padding-top: 10vw;
+
+    background-image: url(images/fundo-bolinha.png);
+    background-position: center center;
+    background-size: cover;
+}
+.CTO > h2 {
+    font-size: clamp(16px, 4vw, 48px);
+    color: #356D78;
+
+    margin-top: clamp(120px, 5vh, 500px);
+}
 @media screen and (max-width: 1260px) {
     /* banner */
 
@@ -229,6 +252,13 @@ main {
     /* -------- melhores bolos --------- */
     .melhores-bolos {
         min-height: 85vh;
+    }
+
+    .feedback {
+        min-height: 50vh;
+    }
+    .CTO {
+        min-height: 50vh;
     }
 }
 
@@ -321,13 +351,6 @@ main {
 }
 
 @media screen and (max-width: 560px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #FFE9F3;
-        /* background-image: url(images/fundo-rosa.jpg) */
-    }
 
     .banner-img {
         width: 100%;
@@ -377,6 +400,14 @@ main {
         height: 25vw;
         /* min-width: 120px; */
         
+    }
+    .CTO {
+        position: relative;
+    }
+    .CTO button {
+        padding: 12px 0 !important;
+        width: 50%;
+        margin-top: 15% !important;
     }
     
 }

@@ -102,13 +102,12 @@ function Main() {
                         <div></div>
                     </div>
                 </div>
+                <img className="vetorrosa" src="images/vetorrosa.png" alt="" />
                 
                 {/* Silmulação de valor */}
-                <div className="pt-5 d-flex flex-column align-items-center px-2">
-                    <h1 className="font-title text-center col-12 col-md-8 mb-4 ">SIMULE O VALOR MONTANDO SEU PRÓPRIO BOLO</h1>
+                <div className="CTO d-flex flex-column align-items-center px-2">
+                    <h2 className="font-spartan text-center col-12 col-md-8 mb-4 ">SIMULE O PREÇO MONTANDO SEU PRÓPRIO BOLO</h2>
                     <p className="font-subtitle text-center color-dark-blue font-s-subtitle">VALORES APROXIMADOS</p>
-
-                    <img className="img-fluid mt-3 mt-sm-5 col-1" src="/images/arrow.png" alt="imagem de seta apontando para baixo" />
 
                     <button className="mt-5 bg-dark-blue text-light col-md-4 col-7 p-md-2 p-1 rounded border-0 mb-5">SIMULAR</button>
                 </div>
