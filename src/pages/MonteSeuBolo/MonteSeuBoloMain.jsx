@@ -14,14 +14,22 @@ function MonteSeuBoloMain() {
         setRecheioEscolhido(event.target.value); // Atualiza o estado com o valor selecionado
     };
 
-    // console.log(recheioEscolhido)
-
     const [tamanhoSelecionado, setTamanhoSelecionado] = useState(null)
 
     function retornarClasseTamanhoDoBolo(tamanho){
         return tamanho === tamanhoSelecionado && "quadrado-selecionado"
-
     }
+
+    const [coberturaSelecionada, setCoberturaSelecionada] = useState(null)
+    console.log(coberturaSelecionada)
+
+    const [decoracaoSelecionada, setDecoracaoSelecionada] = useState(null)
+    console.log(decoracaoSelecionada)
+
+    function retornarClasseDecoracao(decoracao){
+        return decoracao === decoracaoSelecionada && "decoracao-selecionada"
+    }
+
     return(
         <>
             <main className="">
@@ -38,7 +46,7 @@ function MonteSeuBoloMain() {
                 <section className="row m-0 mt-5">
                     <div className="bg-success col-12 col-md-6 d-flex flex-column align-items-center justify-content-between monte-seu-bolo-imagens p-4 py-5 font-spartan text-light"
                     style={{
-                        backgroundImage: 'url(/images/brownie.jpg',
+                        backgroundImage: 'url(/images/brownie.jpg)',
                         backgroundSize: 'cover',
                         backgroundPositionY: 'center',
                     }}>
@@ -49,7 +57,7 @@ function MonteSeuBoloMain() {
 
                     <div className="bg-success col-12 col-md-6 d-flex flex-column align-items-center justify-content-around monte-seu-bolo-imagens p-4 font-spartan text-light"
                     style={{
-                        backgroundImage: 'url(/images/kitkat.jpg',
+                        backgroundImage: 'url(/images/kitkat.jpg)',
                         backgroundSize: 'cover',
                         backgroundPositionY: 'center',
                     }}>
@@ -154,7 +162,7 @@ function MonteSeuBoloMain() {
                 </section>
 
                 <section className="bg-light-blue pt-5 px-4 d-flex flex-column align-items-center pb-5 recheios" >
-                    <h2 className="text-center font-poiret"
+                    <h2 className="text-center font-poiret color-dark-blue"
                     >Recheios</h2>
 
                     <div className="d-flex flex-column col-12 col-md-6 align-items-center font-spartan mt-5">
@@ -264,7 +272,9 @@ function MonteSeuBoloMain() {
 
                         <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
-                        <button className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
+                        <button 
+                        onClick={() => setCoberturaSelecionada("NO ACETATO")}
+                        className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
                     </div>
                     <div className="imagem-da-cobertura menu-active
                     d-flex flex-column align-items-center
@@ -289,59 +299,69 @@ function MonteSeuBoloMain() {
                     <div className="separa-decoracao-direita">
                         <ul>
                             <li>
-                                <div>
+                                <div onClick={() => setDecoracaoSelecionada("PO CINTILANTE")}
+                                    className={`${retornarClasseDecoracao("PO CINTILANTE")}`}
+                                    >
 
                                 </div>
                                 <p className="m-0 font-spartan">PÓ CINTILANTE</p>
                             </li>
 
                             <li>
-                                <div>
+                                <div onClick={() => setDecoracaoSelecionada("PO GLITTER")}
+                                    className={`${retornarClasseDecoracao("PO GLITTER")}`}>
 
                                 </div>
                                 <p className="m-0 font-spartan">PÓ GLITTER</p>
                             </li>
 
                             <li>
-                                <div>
+                                <div onClick={() => setDecoracaoSelecionada("PRETO")}
+                                    className={`${retornarClasseDecoracao("PRETO")}`}>
 
                                 </div>
                                 <p className="m-0 font-spartan">PRETO</p>
                             </li>
 
                             <li>
-                                <div>
+                                <div onClick={() => setDecoracaoSelecionada("AZUL ANIL")}
+                                    className={`${retornarClasseDecoracao("AZUL ANIL")}`}>
 
                                 </div>
                                 <p className="m-0 font-spartan">AZUL ANIL</p>
                             </li>
 
                             <li>
-                                <div>
+                                <div onClick={() => setDecoracaoSelecionada("EFEITO DE BICO")}
+                                    className={`${retornarClasseDecoracao("EFEITO DE BICO")}`}
+                                    >
 
                                 </div>
                                 <p className="m-0 font-spartan">PÓ CINTILANTE</p>
                             </li>
 
                             <li>
-                                <div>
+                                <div onClick={() => setDecoracaoSelecionada("PO COLORIDO")}
+                                    className={`${retornarClasseDecoracao("PO COLORIDO")}`}>
 
                                 </div>
-                                <p className="m-0 font-spartan">PÓ GLITTER</p>
+                                <p className="m-0 font-spartan">PÓ COLORIDO</p>
                             </li>
 
                             <li>
-                                <div>
+                                <div onClick={() => setDecoracaoSelecionada("PRETO CLARO")}
+                                    className={`${retornarClasseDecoracao("PRETO CLARO")}`}>
 
                                 </div>
-                                <p className="m-0 font-spartan">PRETO</p>
+                                <p className="m-0 font-spartan">PRETO CLARO</p>
                             </li>
 
                             <li>
-                                <div>
+                                <div onClick={() => setDecoracaoSelecionada("AZUL ESCURO")}
+                                    className={`${retornarClasseDecoracao("AZUL ESCURO")}`}>
 
                                 </div>
-                                <p className="m-0 font-spartan">AZUL ANIL</p>
+                                <p className="m-0 font-spartan">AZUL ESCURO</p>
                             </li>
                         </ul>
                     </div>

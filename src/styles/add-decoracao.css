@@ -49,7 +49,15 @@
     margin-right: 20px;
 
     background-color: aliceblue;
+
+    transition: .3s;
+    cursor: pointer;
 }
+
+.decoracao-selecionada {
+    background-color: #D4686E !important;
+}
+
 
 .separa-decoracao-esquerda > h2 {
     font-size: 48px;
