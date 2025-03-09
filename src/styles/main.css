@@ -229,7 +229,7 @@ main {
     background-size: cover;
 }
 .CTO > h2 {
-    font-size: clamp(16px, 4vw, 48px);
+    font-size: clamp(20px, 4vw, 48px);
     color: #356D78;
 
     margin-top: clamp(120px, 5vh, 500px);
@@ -402,9 +402,10 @@ main {
         position: relative;
     }
     .CTO button {
-        padding: 12px 0 !important;
+        padding: 10px 0 !important;
         width: 50%;
         margin-top: 15% !important;
+        font-size: 12px;
     }
     
 }

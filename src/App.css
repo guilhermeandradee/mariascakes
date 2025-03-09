@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poiret+One&display=swap');
 
-@import url('src/styles/general-sans.css');
+@import url('/src/styles/general-sans.css');
 
 #root {
   min-width: 100%;
@@ -96,7 +95,7 @@ body {
 }
 
 .color-dark-blue {
-  color: #55868C;
+  color: #356D78;
 }
 
 /*WIDTH*/

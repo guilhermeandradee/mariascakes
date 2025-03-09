@@ -1,0 +1,18 @@
+.legend p {
+    font-size: clamp(12px, 2vw, 16px);
+    color: #D4686E;
+}
+
+.quadrado-selecionavel {
+    cursor: pointer;
+    transition: .3s;
+}
+.quadrado-selecionavel:hover {
+    background-color: #D4686E;
+    color: #fff;
+}
+
+.quadrado-selecionado {
+    background-color: #D4686E;
+    color: #fff;
+}

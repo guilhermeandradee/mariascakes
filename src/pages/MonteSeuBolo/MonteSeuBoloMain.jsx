@@ -4,6 +4,7 @@ import '../../styles/add-decoracao.css'
 import '../../styles/recheios.css'
 import '../../styles/resultado.css'
 import '../../styles/brigadeiro-superior.css'
+import '../../styles/tamanho-do-bolo.css'
 
 function MonteSeuBoloMain() {
 
@@ -13,16 +14,22 @@ function MonteSeuBoloMain() {
         setRecheioEscolhido(event.target.value); // Atualiza o estado com o valor selecionado
     };
 
-    console.log(recheioEscolhido)
+    // console.log(recheioEscolhido)
 
+    const [tamanhoSelecionado, setTamanhoSelecionado] = useState(null)
+
+    function retornarClasseTamanhoDoBolo(tamanho){
+        return tamanho === tamanhoSelecionado && "quadrado-selecionado"
+
+    }
     return(
         <>
             <main className="">
                 {/* primeira sessão */}
                 <div className="d-flex flex-column justify-content-center align-items-center mt-5 px-2">
-                    <h2 className="font-title text-center col-sm-8 col-12">MONTE SEU BOLO POR PARTES E CONSULTE O VALOR FINAL APROXIMADO</h2>
+                    <h2 className="font-poiret text-center col-sm-8 col-12 color-dark-blue">Crie seu bolo do jeito que quiser e veja uma estimativa de preço!</h2>
 
-                    <p className="font-subtitle color-dark-blue mt-5 com-sm-12 col-10 text-center">PARA SERVIÇOS FORA DO CARDÁPIO NOS CONSULTE NO WHATSAPP</p>
+                    <p className="font-spartan color-dark-blue mt-5 com-sm-12 col-10 text-center">Quer algo exclusivo fora do cardápio? Chama a gente no WhatsApp e vamos criar juntos!</p>
 
                     <img className="img-fluid mt-3 mt-sm-5" src="/images/arrow.png" alt="imagem de seta apontando para baixo" style={{maxWidth: '5%'}} />
                 </div>
@@ -54,23 +61,25 @@ function MonteSeuBoloMain() {
                 </section>
 
                 {/* tamanho do bolo */}
-                <section className="px-0 px-sm-3 mb-5 py-5">
-                    <h2 className="font-title text-center mt-5">TAMANHO DO BOLO</h2>
+                <section className="px-0 px-sm-3 py-5 bg-light-pink">
+                    <h2 className="font-poiret text-center mt-5 color-subtitle">Tamanho</h2>
 
-                    <div className="d-flex m-0 justify-content-center flex-wrap">
+                    <div className="d-flex m-0 justify-content-center flex-wrap ">
 
-                        <div className="w-100 d-flex justify-content-center flex-wrap">
+                        <div className="w-100 d-flex justify-content-center flex-wrap ">
                             <div className="d-flex flex-column align-items-center">
 
                                 {/* card tamanho do bolo */}
-                                <div className="bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel mx-sm-4 mx-md-3 mx-2 mt-5">
+                                <div
+                                onClick={() => setTamanhoSelecionado("MINI")}
+                                className={`bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel  mx-sm-4 mx-md-3 mx-2 mt-5 ${retornarClasseTamanhoDoBolo("MINI")}`}>
                                     MINI
                                 </div>
 
                                 {/* info */}
-                                <div className="align-items-center d-flex flex-column col-11 mt-3">
-                                    <p className="m-0 font-subtitle">FATIAS: de 8 a 10</p>
-                                    <p className="m-0 font-subtitle">PESO: de 800g a 1kg</p>
+                                <div className="align-items-center d-flex flex-column col-11 mt-3 legend">
+                                    <p className="m-0 font-spartan">Fatias: de 8 a 10</p>
+                                    <p className="m-0 font-spartan">Peso: de 800g a 1kg</p>
                                 </div>
                             </div>
 
@@ -78,56 +87,64 @@ function MonteSeuBoloMain() {
                             <div className="d-flex flex-column align-items-center">
 
                                 {/* card tamanho do bolo */}
-                                <div className="bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel mx-sm-4 mx-md-3 mx-2 mt-5">
+                                <div
+                                onClick={() => setTamanhoSelecionado("P")}
+                                className={`bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel  mx-sm-4 mx-md-3 mx-2 mt-5 ${retornarClasseTamanhoDoBolo("P")}`}>
                                     P
                                 </div>
 
                                 {/* info */}
-                                <div className="align-items-center d-flex flex-column col-11 mt-3">
-                                    <p className="m-0 font-subtitle">FATIAS: De 12 a 14</p>
-                                    <p className="m-0 font-subtitle">PESO: 1,4kg a 1,6kg</p>
+                                <div className="align-items-center d-flex flex-column col-11 mt-3 legend">
+                                    <p className="m-0 font-spartan">Fatias: De 12 a 14</p>
+                                    <p className="m-0 font-spartan">Peso: 1,4kg a 1,6kg</p>
                                 </div>
                             </div>
 
                             <div className="d-flex flex-column align-items-center">
 
                                 {/* card tamanho do bolo */}
-                                <div className="bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel mx-sm-4 mx-md-3 mx-2 mt-5">
+                                <div
+                                onClick={() => setTamanhoSelecionado("M")}
+                                className={`bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel  mx-sm-4 mx-md-3 mx-2 mt-5 ${retornarClasseTamanhoDoBolo("M")}`}>
                                     M
                                 </div>
 
                                 {/* info */}
-                                <div className="align-items-center d-flex flex-column col-11 mt-3">
-                                    <p className="m-0 font-subtitle">FATIAS: De 16 a 18</p>
-                                    <p className="m-0 font-subtitle">PESO: 1,8kg a 2kg</p>
+                                <div className="align-items-center d-flex flex-column col-11 mt-3 legend">
+                                    <p className="m-0 font-spartan">Fatias: De 16 a 18</p>
+                                    <p className="m-0 font-spartan">Peso: 1,8kg a 2kg</p>
                                 </div>
                             </div>
 
                             <div className="d-flex flex-column align-items-center">
 
                                 {/* card tamanho do bolo */}
-                                <div className="bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel mx-sm-4 mx-md-3 mx-2 mt-5">
+                                <div
+                                onClick={() => setTamanhoSelecionado("G")}
+                                className={`bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel  mx-sm-4 mx-md-3 mx-2 mt-5 ${retornarClasseTamanhoDoBolo("G")}`}>
                                     G
                                 </div>
 
                                 {/* info */}
-                                <div className="align-items-center d-flex flex-column col-11 mt-3">
-                                    <p className="m-0 font-subtitle">FATIAS: De 18 a 20</p>
-                                    <p className="m-0 font-subtitle">PESO: 2kg a 2,2kg</p>
+                                <div className="align-items-center d-flex flex-column col-11 mt-3 legend">
+                                    <p className="m-0 font-spartan">Fatias: De 18 a 20</p>
+                                    <p className="m-0 font-spartan">Peso: 2kg a 2,2kg</p>
                                 </div>
                             </div>
 
                             <div className="d-flex flex-column align-items-center">
 
                                 {/* card tamanho do bolo */}
-                                <div className="bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel mx-sm-4 mx-md-3 mx-2 mt-5">
+                                <div
+                                onClick={() => setTamanhoSelecionado("GG")}
+                                className={`bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel  mx-sm-4 mx-md-3 mx-2 mt-5 ${retornarClasseTamanhoDoBolo("GG")} `}>
                                     GG
                                 </div>
 
                                 {/* info */}
-                                <div className="align-items-center d-flex flex-column col-11 mt-3">
-                                    <p className="m-0 font-subtitle">FATIAS: De 25 a 30</p>
-                                    <p className="m-0 font-subtitle">PESO: 2,8kg a 3kg</p>
+                                <div className="align-items-center d-flex flex-column col-11 mt-3 legend">
+                                    <p className="m-0 font-spartan">Fatias: De 25 a 30</p>
+                                    <p className="m-0 font-spartan">Peso: 2,8kg a 3kg</p>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +154,7 @@ function MonteSeuBoloMain() {
                 </section>
 
                 <section className="bg-light-blue pt-5 px-4 d-flex flex-column align-items-center pb-5 recheios" >
-                    <h2 className="text-center font-title"
+                    <h2 className="text-center font-poiret"
                     >Recheios</h2>
 
                     <div className="d-flex flex-column col-12 col-md-6 align-items-center font-spartan mt-5">
@@ -262,7 +279,7 @@ function MonteSeuBoloMain() {
                     </div>
                 </section>
 
-                {/* <section className="add-decoracao w-100 mt-5">
+                <section className="add-decoracao w-100 mt-5">
                     <div className="separa-decoracao-esquerda">
                         <h2 className="font-poiret">ADICIONE UMA DECORAÇÃO</h2>
 
@@ -328,9 +345,9 @@ function MonteSeuBoloMain() {
                             </li>
                         </ul>
                     </div>
-                </section> */}
+                </section>
 
-                <section className="brigadeiro-superior">
+                {/* <section className="brigadeiro-superior">
                     <h2 className="font-poiret">BRIGADEIRO SUPERIOR</h2>
                     <p className="font-spartan">SERÃO CALCULADOS A PARTE DE ACORDO COM QUANTIDADE</p>
                     <div className="brigadeiro-sup-opcoes">
@@ -366,7 +383,7 @@ function MonteSeuBoloMain() {
                         <div>0</div>
                         <img src="/images/mais.png" alt="" />
                     </div>
-                </section>
+                </section> */}
 
                 <section className="resultado">
                     <h2 className="font-poiret">RESULTADO</h2>

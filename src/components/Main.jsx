@@ -1,10 +1,12 @@
 import { AppContext } from "../contexts/windowSizeContext"
+import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react"
 import HamMenu from "./HamMenu.jsx";
 
 import '../styles/main.css'
 
 function Main() {
+    const navigate = useNavigate();
 
     const { isMobileView, setIsMobileView } = useContext(AppContext);
     
@@ -23,12 +25,17 @@ function Main() {
                     <div className="hero-div">
                         <div>
                             <h1 className="font-poiret">Sabores Que Marcam Momentos</h1>
-                            <p className="font-poiret">Cada doce é único, feito para tornar sua celebração inesquecível.</p>
+                            <p className="font-spartan">Cada doce é único, feito para tornar sua celebração inesquecível.</p>
 
                         </div>
                             <div className="button-container">
-                                <button>Monte Seu Bolo</button>
-                                <button>Entre Em Contato</button>
+                                <button
+                                onClick={() => navigate('/monte-seu-bolo')}
+                                >Monte Seu Bolo</button>
+
+                                <button>
+                                    <a style={{textDecoration: 'none', color: '#D4686E'}} target="_blank" href="https://wa.me/5511961957783?text=Olá,%20quero%20fazer%20um%20pedido!" rel="noopener noreferrer">Entre Em Contato</a>
+                                </button>
                             </div>
                     </div>
                     <img src="/images/header-bg.png" alt="imagem ilustrativa de bolos personailzados" />
@@ -107,9 +114,11 @@ function Main() {
                 {/* Silmulação de valor */}
                 <div className="CTO d-flex flex-column align-items-center px-2">
                     <h2 className="font-spartan text-center col-12 col-md-8 mb-4 ">SIMULE O PREÇO MONTANDO SEU PRÓPRIO BOLO</h2>
-                    <p className="font-subtitle text-center color-dark-blue font-s-subtitle">VALORES APROXIMADOS</p>
+                    <p className="font-spartan text-center color-dark-blue font-s-subtitle">VALORES APROXIMADOS</p>
 
-                    <button className="mt-5 bg-dark-blue text-light col-md-4 col-7 p-md-2 p-1 rounded border-0 mb-5">SIMULAR</button>
+                    <button 
+                    onClick={() => navigate('/monte-seu-bolo')}
+                    className="mt-5 bg-dark-blue text-light col-md-4 col-7 p-md-2 p-1 rounded border-0 mb-5">SIMULAR</button>
                 </div>
             </main>
         </>
