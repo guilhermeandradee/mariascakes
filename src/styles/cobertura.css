@@ -5,7 +5,7 @@
     background-position: center center;
 
     min-width: 250px;
-    width: 20%;
+    width: 25%;
     
 }
 
@@ -127,29 +127,6 @@ section.coberturas {
 
     /* Ultimo elemento */
 
-    section.coberturas > :last-child{
-        width: 100%;
-
-        background-position: center center;
-    }
-
-    .coberturas > :last-child > h3{
-        font-size: 35px;
-    }
-
-    .coberturas > :last-child > p {
-        font-size: 22px;
-    }
-
-    .coberturas > :last-child > #bolo-icon {
-        width: 65px;
-        margin: 20% 0;
-    }
-    .coberturas > :last-child > .adicionar-cobertura-btn {
-        padding: 5px 70px;
-        font-size: 20px;
-        
-    }
 }
 
 @media screen and (max-width: 732px) {
@@ -210,15 +187,6 @@ section.coberturas {
         font-weight: 200;
     }
 
-    section.coberturas > :last-child{
-        width: 100%;
-        height: 100vh;
-
-        background-position: center center;
-    }
-    section.coberturas > :last-child #bolo-icon{
-        margin: 10% 0 15% 0;
-    }
 }
 
 @media screen and (max-width: 560px) {
@@ -282,31 +250,6 @@ section.coberturas {
     
         font-size: 10px;
         font-weight: 100;
-    }
-
-    /* Ultimo elemento */
-
-    section.coberturas > :last-child{
-        width: 100%;
-
-        background-position: center center;
-    }
-
-    .coberturas > :last-child > h3{
-        font-size: 30px;
-    }
-
-    .coberturas > :last-child > p {
-        font-size: 20px;
-    }
-
-    .coberturas > :last-child > #bolo-icon {
-        width: 60px;
-        margin-bottom: 15%;
-    }
-    .coberturas > :last-child > .adicionar-cobertura-btn {
-        padding: 5px 70px;
-        font-size: 20px;
     }
 
     
