@@ -120,6 +120,7 @@ function MonteSeuBoloMain() {
 
 
     const [pedido, setPedido] = useState({
+        formato: "",
         tamanho: "",
         recheio: "",
         massa: "",
@@ -164,20 +165,20 @@ function MonteSeuBoloMain() {
                         backgroundSize: 'cover',
                         backgroundPositionY: 'center',
                     }}>
-                        <h3 className="font-title-spartan text-center font-w-normal mt-4">BOLO TRADICIONAL</h3>
+                        <h3 className="font-spartan text-center font-w-normal mt-4">BOLO REDONDO</h3>
 
-                        <button className="mt-5 col-6 col-md-5 border-0 bg-dark-blue m-0 rounded"><p className="m-0 p-2 font-subtitle text-light font-w-normal">PERSONALIZAR</p></button>
+                        <button onClick={() => atualizarPedido("formato", "REDONDO")} className="formato-btn mt-5 col-6 col-md-5 m-0 rounded"><p className="m-0 p-2 font-spartan text-light font-w-normal ">{pedido.formato == "REDONDO" ? "ESCOLHIDO" : "ESCOLHER"}</p></button>
                     </div>
 
-                    <div className="bg-success col-12 col-md-6 d-flex flex-column align-items-center justify-content-around monte-seu-bolo-imagens p-4 font-spartan text-light"
+                    <div className="bg-success col-12 col-md-6 d-flex flex-column align-items-center justify-content-between monte-seu-bolo-imagens p-4 py-5 font-spartan text-light"
                     style={{
-                        backgroundImage: 'url(/images/kitkat.jpg)',
+                        backgroundImage: 'url(/images/brownie.jpg)',
                         backgroundSize: 'cover',
                         backgroundPositionY: 'center',
                     }}>
-                        <h3 className="font-title-spartan text-center font-w-normal">BOLO TRADICIONAL</h3>
+                        <h3 className="font-spartan text-center font-w-normal mt-4">BOLO RETANGULAR</h3>
 
-                        <button className="mt-5 col-md-5 border-0 bg-dark-blue m-0 rounded"><p className="m-0 p-2  text-light font-w-normal">PERSONALIZAR</p></button>
+                        <button onClick={() => atualizarPedido("formato", "RETANGULAR")} className="formato-btn mt-5 col-6 col-md-5 m-0 rounded"><p className="m-0 p-2 font-spartan text-light font-w-normal ">{pedido.formato == "RETANGULAR" ? "ESCOLHIDO" : "ESCOLHER"}</p></button>
                     </div>
 
                 </section>
@@ -345,55 +346,55 @@ function MonteSeuBoloMain() {
                     d-flex flex-column align-items-center
                     " 
                     >
-                        <h3 className="font-poiret text-center">MASSA BRANCA</h3>
-                        <p className="font-spartan text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
+                        <h3 className="font-poiret color-subtitle text-center">MASSA BRANCA</h3>
+                        <p className="font-spartan color-subtitle text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
                         <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
                         <button
                         onClick={() => atualizarPedido("massa", "MASSA BRANCA")}
-                        className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
+                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "MASSA BRANCA" ? "ADICIONADO" : "ADICIONAR"}</button>
                     </div>
 
                     <div className="imagem-da-cobertura menu-active
                     d-flex flex-column align-items-center
                     " 
                     >
-                        <h3 className="font-poiret text-center">MASSA DE CHOCLATE</h3>
-                        <p className="font-spartan text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
+                        <h3 className="font-poiret color-subtitle text-center">MASSA DE CHOCLATE</h3>
+                        <p className="font-spartan color-subtitle text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
                         <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
                         <button
                         onClick={() => atualizarPedido("massa", "MASSA DE CHOCOLATE")}
-                        className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
+                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "MASSA DE CHOCOLATE" ? "ADICIONADO" : "ADICIONAR"}</button>
                     </div>
 
                     <div className="imagem-da-cobertura menu-active
                     d-flex flex-column align-items-center
                     " 
                     >
-                        <h3 className="font-poiret text-center">COBERTURA DE CHANTININHO</h3>
-                        <p className="font-spartan text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
+                        <h3 className="font-poiret color-subtitle text-center">COBERTURA DE CHANTININHO</h3>
+                        <p className="font-spartan color-subtitle text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
                         <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
                         <button 
                         onClick={() => atualizarPedido("cobertura", "COBERTURA DE CHANTININHO")}
-                        className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
+                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "COBERTURA DE CHANTININHO" ? "ADICIONADO" : "ADICIONAR"}</button>
                     </div>
                     <div className="imagem-da-cobertura menu-active
                     d-flex flex-column align-items-center
                     " 
                     >
-                        <h3 className="font-poiret text-center">COBERTURA DE GANACHE</h3>
-                        <p className="font-spartan text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
+                        <h3 className="font-poiret color-subtitle text-center">COBERTURA DE GANACHE</h3>
+                        <p className="font-spartan color-subtitle text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
                         <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
 
                         <button
                         onClick={() => atualizarPedido("cobertura", "COBERTURA DE GANACHE")}
-                        className="adicionar-cobertura-btn font-spartan">ADICIONAR</button>
+                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "COBERTURA DE GANACHE" ? "ADICIONADO" : "ADICIONAR"}</button>
                     </div>
                 </section>
 
@@ -515,6 +516,11 @@ function MonteSeuBoloMain() {
 
                 <section className="resultado">
                     <h2 className="font-poiret">RESULTADO</h2>
+
+                    {pedido.formato && <div className="item-carrinho">
+                        <p className="font-spartan m-0">FORMATO</p>
+                        <p className="font-spartan m-0">{pedido.formato}</p>
+                    </div>}
 
                     {pedido.tamanho && <div className="item-carrinho">
                         <p className="font-spartan m-0">TAMANHO</p>

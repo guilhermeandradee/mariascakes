@@ -97,6 +97,16 @@
     }
 }
 
+.formato-btn {
+    background-color: #D4686E;
+    border-radius: 10px;
+    border: none;
+    transition: .3s;
+} 
+.formato-btn:hover {
+    background-color: #cc9fa1;
+} 
+
 @media screen and (max-width: 732px) {
     .add-decoracao {
         flex-direction: column;
