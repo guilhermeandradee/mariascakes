@@ -15,9 +15,9 @@ function CardapioDocesPersonalizados(){
                     <h2 className="font-poiret">CARDÁPIO DE DOCES PERSONALIZADOS</h2>
                     <div></div>
 
-                    <p className="font-spartan">PARA DOCES MODELADOS EM 3D, QUE POSSUAM PÓ DOURADO, CINTILANTE OU AQUARELADO, <a href="">CONSULTAR VALOR CONOSOCO</a></p>
+                    <p className="font-spartan">DOCES 3D QUE POSSUEM PÓ DOURADO, CINTILANTE OU AQUARELADO, DEVEM SER CONSULTADOS ENTRANDO EM CONTATO</p>
 
-                    <p className="font-spartan">KITS SÃO APENAS SUGESTÕES DE MONTAGEM, PARA MONTAR O SEU KIT, <a href="">CONSULTE O VALOR UNITÁRIO DOS DOCES</a></p>
+                    <p className="font-spartan">VOCÊ PODE ESCOLHER UM KIT PRONTO OU MONTAR O SEU PRÓPRIO KIT ENVIANDO <a href="">CADA ITEM</a> NO NOSSO <a href="">WHATSAPP</a></p>
                 </section>
 
                 <section className="kits-prontos">

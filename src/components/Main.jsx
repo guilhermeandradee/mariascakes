@@ -113,7 +113,7 @@ function Main() {
                 
                 {/* Silmulação de valor */}
                 <div className="CTO d-flex flex-column align-items-center px-2">
-                    <h2 className="font-spartan text-center col-12 col-md-8 mb-4 ">SIMULE O PREÇO MONTANDO SEU PRÓPRIO BOLO</h2>
+                    <h2 className="font-poiret text-center col-12 col-md-8 mb-4 ">SIMULE O PREÇO MONTANDO SEU PRÓPRIO BOLO</h2>
                     <p className="font-spartan text-center color-dark-blue font-s-subtitle">VALORES APROXIMADOS</p>
 
                     <button 

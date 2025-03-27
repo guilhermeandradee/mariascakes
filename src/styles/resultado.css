@@ -14,6 +14,7 @@
 .item-carrinho {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     width: 70%;
     padding: 30px 150px;
@@ -33,6 +34,10 @@
     width: 70%;
     text-align: end;
     margin-top: 15px;
+}
+
+.resultado div p {
+    text-align: end;
 }
 
 .fale-conosco {

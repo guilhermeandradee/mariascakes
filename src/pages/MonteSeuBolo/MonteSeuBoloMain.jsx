@@ -5,6 +5,11 @@ import '../../styles/recheios.css'
 import '../../styles/resultado.css'
 import '../../styles/brigadeiro-superior.css'
 import '../../styles/tamanho-do-bolo.css'
+import { GoCheck } from "react-icons/go";
+import { LuCakeSlice } from "react-icons/lu";
+import { TbCakeRoll } from "react-icons/tb";
+import { FaCheck } from "react-icons/fa6";
+
 
 const precos = {
     tradicional: {
@@ -35,7 +40,7 @@ const categoriasRecheio = {
     brigadeiroDeNinho: "tradicional",
     brigadeiroDeMorango: "tradicional",
     brigadeiroBranco: "tradicional",
-    brigadeiroDeDoceDeLeite: "tradicional",
+    doceDeLeite: "tradicional",
     brigadeiroDoceDeLeiteComCoco: "tradicional",
 
     // Superior Gourmet
@@ -56,6 +61,7 @@ const categoriasRecheio = {
 function MonteSeuBoloMain() {
 
     const [recheioEscolhido, setRecheioEscolhido] = useState('')
+    console.log(recheioEscolhido)
 
     const handleChange = (event) => {
         setRecheioEscolhido(event.target.value); // Atualiza o estado com o valor selecionado
@@ -89,7 +95,7 @@ function MonteSeuBoloMain() {
     const [precoFinal, setPrecoFinal] = useState(0)
 
     function retornarClasseDecoracao(decoracao){
-        return decoracao === decoracaoSelecionada && "decoracao-selecionada"
+        return pedido.decoracao.includes(decoracao) && "decoracao-selecionada"
     }
 
     function valorItem(itemEscolhido, tipo) {
@@ -125,13 +131,30 @@ function MonteSeuBoloMain() {
         recheio: "",
         massa: "",
         cobertura: "",
-        decoracao: "",
+        decoracao: [],
         preco: 0
     });
 
     function atualizarPedido(campo, valor) {
         setPedido(prev => {
-            const novoPedido = { ...prev, [campo]: valor };
+            const novoPedido = { ...prev };
+
+        if (campo === "decoracao") {
+            // Garante que `decoracao` seja sempre um array
+            if (!Array.isArray(novoPedido.decoracao)) {
+                novoPedido.decoracao = [];
+            }
+
+            // Adiciona ou remove a decoração
+            if (novoPedido.decoracao.includes(valor)) {
+                novoPedido.decoracao = novoPedido.decoracao.filter(item => item !== valor);
+            } else {
+                novoPedido.decoracao = [...novoPedido.decoracao, valor];
+            }
+        } else {
+            // Atualiza normalmente os outros campos
+            novoPedido[campo] = valor;
+        }
 
             // Verifica se tamanho e recheio foram escolhidos para calcular o preço
             if (novoPedido.tamanho && novoPedido.recheio) {
@@ -145,6 +168,41 @@ function MonteSeuBoloMain() {
 
     console.log(pedido)
 
+    function returnOkRecheio(recheio){
+        return categoriasRecheio[recheioEscolhido] === recheio && <GoCheck className="ms-2 color-dark-blue" />
+    }
+    function returnOk(campo, valor){
+        return campo === valor && <FaCheck  />
+    }
+    function returnOk(campo, valor){
+        if(campo === pedido.decoracao){
+            return pedido.decoracao.includes(valor) && <FaCheck  />
+        } else {
+            return campo === valor && <FaCheck  />
+        }
+    }
+
+    console.log(categoriasRecheio[recheioEscolhido])
+
+
+    function returnMINISize(){
+        const categoria = categoriasRecheio[pedido.recheio];
+        if(pedido.formato === "REDONDO" && !categoria || categoria === "tradicional"){
+            return(
+                <><div
+                    onClick={() => handleClickTamanho("MINI", "tamanho", "MINI")}
+                    className={`bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel  mx-sm-4 mx-md-3 mx-2 mt-5 ${retornarClasseTamanhoDoBolo("MINI")}`}>
+                        MINI
+                </div>
+
+                <div className="align-items-center d-flex flex-column col-11 mt-3 legend">
+                <p className="m-0 font-spartan">Fatias: 10</p>
+                </div></>
+            )
+        }
+    }
+
+
     return(
         <>
             <main className="">
@@ -152,35 +210,117 @@ function MonteSeuBoloMain() {
                 <div className="d-flex flex-column justify-content-center align-items-center mt-5 px-2">
                     <h2 className="font-poiret text-center col-sm-8 col-12 color-dark-blue">Crie seu bolo do jeito que quiser e veja uma estimativa de preço!</h2>
 
-                    <p className="font-spartan color-dark-blue mt-5 com-sm-12 col-10 text-center">Quer algo exclusivo fora do cardápio? Chama a gente no WhatsApp e vamos criar juntos!</p>
+                    <p className="font-spartan color-dark-blue mt-5 com-sm-12 col-10 text-center">Quer algo exclusivo fora do <a href="">cardápio</a>? Chama a gente no <a href="">WhatsApp</a> e vamos criar juntos!</p>
 
-                    <img className="img-fluid mt-3 mt-sm-5" src="/images/arrow.png" alt="imagem de seta apontando para baixo" style={{maxWidth: '5%'}} />
+                    {/* <img className="img-fluid mt-3 mt-sm-5" src="/images/arrow.png" alt="imagem de seta apontando para baixo" style={{maxWidth: '5%'}} /> */}
+                    <LuCakeSlice className="img-fluid mt-3 mt-sm-5 color-dark-blue" style={{width: 'clamp(30px, 2vw, 3vw)'}}/>
                 </div>
 
                 {/* seleção de bolo */}
                 <section className="row m-0 mt-5">
                     <div className="bg-success col-12 col-md-6 d-flex flex-column align-items-center justify-content-between monte-seu-bolo-imagens p-4 py-5 font-spartan text-light"
                     style={{
-                        backgroundImage: 'url(/images/brownie.jpg)',
+                        backgroundImage: 'url(/images/cup.jpg)',
                         backgroundSize: 'cover',
                         backgroundPositionY: 'center',
                     }}>
-                        <h3 className="font-spartan text-center font-w-normal mt-4">BOLO REDONDO</h3>
+                        <h3 className="font-poiret text-center font-w-normal mt-4 color-subtitle">BOLO REDONDO</h3>
 
-                        <button onClick={() => atualizarPedido("formato", "REDONDO")} className="formato-btn mt-5 col-6 col-md-5 m-0 rounded"><p className="m-0 p-2 font-spartan text-light font-w-normal ">{pedido.formato == "REDONDO" ? "ESCOLHIDO" : "ESCOLHER"}</p></button>
+                        <button onClick={() => atualizarPedido("formato", "REDONDO")} className="formato-btn mt-5 col-6 col-md-5 m-0 rounded"><p className="m-0 p-2 font-spartan text-light font-w-normal ">{pedido.formato == "REDONDO" ? "ESCOLHIDO" : "ESCOLHER"}{returnOk(pedido.formato, "REDONDO")}</p></button>
                     </div>
 
                     <div className="bg-success col-12 col-md-6 d-flex flex-column align-items-center justify-content-between monte-seu-bolo-imagens p-4 py-5 font-spartan text-light"
                     style={{
-                        backgroundImage: 'url(/images/brownie.jpg)',
+                        backgroundImage: 'url(/images/cup2.jpg)',
                         backgroundSize: 'cover',
                         backgroundPositionY: 'center',
                     }}>
-                        <h3 className="font-spartan text-center font-w-normal mt-4">BOLO RETANGULAR</h3>
+                        <h3 className="font-poiret text-center font-w-normal mt-4 color-subtitle">BOLO RETANGULAR</h3>
 
-                        <button onClick={() => atualizarPedido("formato", "RETANGULAR")} className="formato-btn mt-5 col-6 col-md-5 m-0 rounded"><p className="m-0 p-2 font-spartan text-light font-w-normal ">{pedido.formato == "RETANGULAR" ? "ESCOLHIDO" : "ESCOLHER"}</p></button>
+                        <button onClick={() => atualizarPedido("formato", "RETANGULAR")} className="formato-btn mt-5 col-6 col-md-5 m-0 rounded "><p className="m-0 p-2 font-spartan text-light font-w-normal ">{pedido.formato == "RETANGULAR" ? `ESCOLHIDO` : "ESCOLHER"}{returnOk(pedido.formato, "RETANGULAR")}</p></button>
                     </div>
 
+                </section>
+
+                
+                {/* recheio */}
+                <section className="bg-light-blue pt-5 px-4 d-flex flex-column align-items-center pb-5 recheios" >
+                    <h2 className="text-center font-poiret color-dark-blue"
+                    >Recheios</h2>
+                    <p className="font-spartan color-dark-blue">Escolha um recheio</p>
+                    <p className="font-spartan color-dark-blue">Somente recheios tradicionais tem o tamanho mini*</p>
+
+                    <div className="d-flex flex-column col-12 col-md-6 align-items-center font-spartan mt-5">
+
+                        <div className="w-100 font-w-normal d-flex align-items-center">
+                            <label className="">TRADICIONAL </label>
+                            {returnOkRecheio('tradicional')}
+                            
+                        </div>
+                        <select 
+                        value={recheioEscolhido} 
+                        onChange={(e) => handleClickRecheio("recheio", e.target.value)}
+                        className="w-100 bg-dark-blue py-2 px-3 border-0 text-light seletor mb-5"
+                        id="tamanho" name="tamanho"
+                        style={{
+                            borderRadius: '3px',
+                            outline: 'none',
+                        }}>
+                            <option value="brigadeiro">Brigadeiro</option>
+                            <option value="beijinho">Beijinho</option>
+                            <option value="brigadeiroDeNinho">Brigadeiro de ninho</option>
+                            <option value="doceDeLeite" >Doce de leite</option>
+                            <option value="brigadeiroDeMorango">Brigadeiro de morango</option>
+                            <option value="brigadeiroDoceDeLeiteComCoco">Brigadeiro de doce de leite com coco</option>
+                            <option value="brigadeiroBranco" >Brigadeiro branco</option>
+                        </select>
+                       
+
+
+                        <div className="w-100 font-w-normal d-flex align-items-center">
+                            <label className="">Recheio Superior Gourmet</label>
+                            {returnOkRecheio('superiorgourmet')}
+                        </div>
+                        <select
+                        className="w-100 bg-dark-blue py-2 px-3 border-0 text-light seletor mb-5"
+                        value={recheioEscolhido} 
+                        onChange={(e) => handleClickRecheio("recheio", e.target.value)}
+                        id="tamanho" name="tamanho"
+                        style={{
+                            borderRadius: '3px',
+                            outline: 'none',
+                        }}>
+                            <option value="brigadeirDeNutella" >Brigadeiro de nutella</option>
+                            <option value="brigadeiro5LeitesComGeleiaDeMorango">Brigadeiro 5 leites com geleia de morango</option>
+                            <option value="mousseTrufadoDeMaracuja">Mousse trufado de maracujá</option>
+                            <option value="mousseTrufadoDeChocolate" >Mousse trufado de chocolate</option>
+                            <option value="mousseTrufadoDeNinho" >Mousse trudfado de ninho</option>
+                            <option value="mousseTrufadoDeChocolate" >Mousse trufado de nutella</option>
+                            
+                        
+                        </select>
+
+
+                        <div className="w-100 font-w-normal d-flex align-items-center">
+                            <label className="">Recheio Tradicinal + Frutas</label>
+                            {returnOkRecheio('tradicionalfrutas')}
+                        </div>
+                        <select
+                        className="w-100 bg-dark-blue py-2 px-3 border-0 text-light seletor mb-5"
+                        value={recheioEscolhido} 
+                        onChange={(e) => handleClickRecheio("recheio", e.target.value)}
+                        id="tamanho" name="tamanho"
+                        style={{
+                            borderRadius: '3px',
+                            outline: 'none',
+                        }}>
+                            <option value="morango">Morango</option>
+                            <option value="ameixa">Ameixa</option>
+                            <option value="abacaxi">Abacaxi</option>
+                            
+                        
+                        </select>
+                    </div>
                 </section>
 
                 {/* tamanho do bolo */}
@@ -194,16 +334,12 @@ function MonteSeuBoloMain() {
                             <div className="d-flex flex-column align-items-center">
 
                                 {/* card tamanho do bolo */}
-                                <div
-                                onClick={() => handleClickTamanho("MINI", "tamanho", "MINI")}
-                                className={`bg-cinza d-flex justify-content-center align-items-center rounded quadrado-selecionavel  mx-sm-4 mx-md-3 mx-2 mt-5 ${retornarClasseTamanhoDoBolo("MINI")}`}>
-                                    MINI
-                                </div>
+                                
+
+                                {returnMINISize()}
 
                                 {/* info */}
-                                <div className="align-items-center d-flex flex-column col-11 mt-3 legend">
-                                    <p className="m-0 font-spartan">Fatias: 10</p>
-                                </div>
+                                
                             </div>
 
 
@@ -272,73 +408,6 @@ function MonteSeuBoloMain() {
                     </div>
                 </section>
 
-                <section className="bg-light-blue pt-5 px-4 d-flex flex-column align-items-center pb-5 recheios" >
-                    <h2 className="text-center font-poiret color-dark-blue"
-                    >Recheios</h2>
-                    <p className="font-spartan color-dark-blue">Escolha um recheio</p>
-
-                    <div className="d-flex flex-column col-12 col-md-6 align-items-center font-spartan mt-5">
-
-                        <label className="w-100 font-w-normal">TRADICIONAL</label>
-                        <select 
-                        value={recheioEscolhido} 
-                        onChange={(e) => handleClickRecheio("recheio", e.target.value)}
-                        className="w-100 bg-dark-blue py-2 px-3 border-0 text-light seletor"
-                        id="tamanho" name="tamanho"
-                        style={{
-                            borderRadius: '3px',
-                            outline: 'none',
-                        }}>
-                            <option value="brigadeiro">Brigadeiro</option>
-                            <option value="beijinho">Beijinho</option>
-                            <option value="brigadeiroDeNinho">Brigadeiro de ninho</option>
-                            <option value="doceDeLeite" >Doce de leite</option>
-                            <option value="brigadeiroDeMorango">Brigadeiro de morango</option>
-                            <option value="brigadeiroDeDoceDeLeiteComCoco">Brigadeiro de doce de leite com coco</option>
-                            <option value="brigadeiroBranco" >Brigadeiro branco</option>
-                        </select>
-
-
-                        <label className="w-100 font-w-normal mt-5">RECHEIO SUPERIOR GOURMET</label>
-                        <select
-                        className="w-100 bg-dark-blue py-2 px-3 border-0 text-light seletor"
-                        value={recheioEscolhido} 
-                        onChange={(e) => handleClickRecheio("recheio", e.target.value)}
-                        id="tamanho" name="tamanho"
-                        style={{
-                            borderRadius: '3px',
-                            outline: 'none',
-                        }}>
-                            <option value="brigadeirDeNutella" >Brigadeiro de nutella</option>
-                            <option value="brigadeiro5LeitesComGeleiaDeMorango">Brigadeiro 5 leites com geleia de morango</option>
-                            <option value="mousseTrufadoDeMaracuja">Mousse trufado de maracujá</option>
-                            <option value="mousseTrufadoDeChocolate" >Mousse trufado de chocolate</option>
-                            <option value="mousseTrufadoDeNinho" >Mousse trudfado de ninho</option>
-                            <option value="mousseTrufadoDeChocolate" >Mousse trufado de nutella</option>
-                            
-                        
-                        </select>
-
-
-                        <label className="w-100 font-w-normal mt-5">REHCEIO SUPERIOR FRUTAS (TRADICIONAL + FRUTA) </label>
-                        <select
-                        className="w-100 bg-dark-blue py-2 px-3 border-0 text-light seletor mb-5"
-                        value={recheioEscolhido} 
-                        onChange={(e) => handleClickRecheio("recheio", e.target.value)}
-                        id="tamanho" name="tamanho"
-                        style={{
-                            borderRadius: '3px',
-                            outline: 'none',
-                        }}>
-                            <option value="morango">Morango</option>
-                            <option value="ameixa">Ameixa</option>
-                            <option value="abacaxi">Abacaxi</option>
-                            
-                        
-                        </select>
-                    </div>
-                </section>
-
                 {/* cobertura */}
                 <section className="coberturas d-flex flex-wrap justify-content-center">
 
@@ -349,7 +418,7 @@ function MonteSeuBoloMain() {
                         <h3 className="font-poiret color-subtitle text-center">MASSA BRANCA</h3>
                         <p className="font-spartan color-subtitle text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
-                        <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
+                        <LuCakeSlice id="bolo-icon" />
 
                         <button
                         onClick={() => atualizarPedido("massa", "MASSA BRANCA")}
@@ -363,7 +432,7 @@ function MonteSeuBoloMain() {
                         <h3 className="font-poiret color-subtitle text-center">MASSA DE CHOCLATE</h3>
                         <p className="font-spartan color-subtitle text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
-                        <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
+                        <LuCakeSlice id="bolo-icon" />
 
                         <button
                         onClick={() => atualizarPedido("massa", "MASSA DE CHOCOLATE")}
@@ -377,7 +446,7 @@ function MonteSeuBoloMain() {
                         <h3 className="font-poiret color-subtitle text-center">COBERTURA DE CHANTININHO</h3>
                         <p className="font-spartan color-subtitle text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
-                        <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
+                        <TbCakeRoll id="bolo-icon" />
 
                         <button 
                         onClick={() => atualizarPedido("cobertura", "COBERTURA DE CHANTININHO")}
@@ -390,7 +459,7 @@ function MonteSeuBoloMain() {
                         <h3 className="font-poiret color-subtitle text-center">COBERTURA DE GANACHE</h3>
                         <p className="font-spartan color-subtitle text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
-                        <img id="bolo-icon" src="/images/boloicon.svg" alt="ícone de bolo" />
+                        <TbCakeRoll id="bolo-icon" />
 
                         <button
                         onClick={() => atualizarPedido("cobertura", "COBERTURA DE GANACHE")}
@@ -398,63 +467,62 @@ function MonteSeuBoloMain() {
                     </div>
                 </section>
 
-                <section className="add-decoracao w-100 mt-5">
+                <section className="add-decoracao w-100 py-5">
                     <div className="separa-decoracao-esquerda">
-                        <h2 className="font-poiret">ADICIONE UMA DECORAÇÃO</h2>
+                        <h2 className="font-poiret color-subtitle">ADICIONE UMA DECORAÇÃO</h2>
 
-                        <p className="font-spartan">OS VALORES SÃO ACRESCENTADOS CONFORME O TIPO DE DECORAÇÂOEM DÚVIDA, CONSULTE O <a href="">CARDÁPIO</a></p>
+                        <p className="font-spartan color-subtitle">OS VALORES DAS DECORAÇÕES DEVERÃO SER CONSULTADOS ENTRANDO EM CONTATO CONOSCO ATRAVÉS DO <a href="">WHATSAPP</a></p>
                     </div>
 
                     <div className="separa-decoracao-direita">
                         <ul>
                             <li>
                                 <div onClick={() => handleClickDecoracao("decoracao", "BOLO COM MAIS DE DUAS CORES")}
-                                    className={`${retornarClasseDecoracao("BOLO COM MAIS DE DUAS CORES")}`}
+                                    className={`${retornarClasseDecoracao("BOLO COM MAIS DE DUAS CORES")} d-flex justify-content-center align-items-center`}
                                     >
-
+                                    {returnOk(pedido.decoracao, "BOLO COM MAIS DE DUAS CORES")}  
                                 </div>
-                                <p className="m-0 font-spartan">BOLO COM MAIS DE DUAS CORES</p>
+                                <p className="m-0 font-spartan ">BOLO COM MAIS DE DUAS CORES</p>
                             </li>
 
                             <li>
                                 <div onClick={() => handleClickDecoracao("decoracao", "GLITTER")}
-                                    className={`${retornarClasseDecoracao("GLITTER")}`}>
-
+                                    className={`${retornarClasseDecoracao("GLITTER")} d-flex justify-content-center align-items-center`}>
+                                    {returnOk(pedido.decoracao, "GLITTER")}  
                                 </div>
-                                <p className="m-0 font-spartan">GLITTER</p>
+                                <p className="m-0 font-spartan ">GLITTER</p>
                             </li>
 
                             <li>
                                 <div onClick={() => handleClickDecoracao("decoracao", "AVELUDADO")}
-                                    className={`${retornarClasseDecoracao("AVELUDADO")}`}>
-
+                                    className={`${retornarClasseDecoracao("AVELUDADO")} d-flex justify-content-center align-items-center`}>
+                                    {returnOk(pedido.decoracao, "AVELUDADO")}  
                                 </div>
-                                <p className="m-0 font-spartan">AVELUDADO</p>
+                                <p className="m-0 font-spartan ">AVELUDADO</p>
                             </li>
 
                             <li>
                                 <div onClick={() => handleClickDecoracao("decoracao", "CORANTE EM PÓ")}
-                                    className={`${retornarClasseDecoracao("CORANTE EM PÓ")}`}>
-
+                                    className={`${retornarClasseDecoracao("CORANTE EM PÓ")} d-flex justify-content-center align-items-center`}>
+                                    {returnOk(pedido.decoracao, "CORANTE EM PÓ")}  
                                 </div>
-                                <p className="m-0 font-spartan">CORANTE EM PÓ</p>
+                                <p className="m-0 font-spartan ">CORANTE EM PÓ</p>
                             </li>
 
                             <li>
                                 <div onClick={() => handleClickDecoracao("decoracao", "TRABALHO DE BICO")}
-                                    className={`${retornarClasseDecoracao("TRABALHO DE BICO")}`}
-                                    >
-
+                                    className={`${retornarClasseDecoracao("TRABALHO DE BICO")} d-flex justify-content-center align-items-center`}>
+                                      {returnOk(pedido.decoracao, "TRABALHO DE BICO")}  
                                 </div>
-                                <p className="m-0 font-spartan">TRABALHODE BICO</p>
+                                <p className="m-0 font-spartan ">TRABALHODE BICO</p>
                             </li>
 
                             <li>
                                 <div onClick={() => handleClickDecoracao("decoracao", "PO COLORIDO")}
-                                    className={`${retornarClasseDecoracao("PO COLORIDO")}`}>
-
+                                    className={`${retornarClasseDecoracao("PO COLORIDO")} d-flex justify-content-center align-items-center`}>
+                                    {returnOk(pedido.decoracao, "PO COLORIDO")}  
                                 </div>
-                                <p className="m-0 font-spartan">PÓ COLORIDO</p>
+                                <p className="m-0 font-spartan ">PÓ COLORIDO</p>
                             </li>
 {/* 
                             <li>
@@ -529,7 +597,7 @@ function MonteSeuBoloMain() {
 
                     {pedido.recheio && <div className="item-carrinho">
                         <p className="font-spartan m-0">RECHEIO</p>
-                        <p className="font-spartan m-0">{pedido.recheio}</p>
+                        <p className="font-spartan m-0">{pedido.recheio.toUpperCase()}</p>
                     </div>}
 
                     {pedido.massa && <div className="item-carrinho">
@@ -548,8 +616,13 @@ function MonteSeuBoloMain() {
                     </div>}
                     <p className="font-spartan">Valor Aproximado: R${pedido.preco},00</p>
 
-                    
+                    <div className="fale-conosco">
+                    <h3 className="font-spartan" style={{fontSize: 'clamp(12px, 1vw, 22px)'}}>FALE CONOSCO E ENCOMENDE O SEU PEDIDO</h3>
+                    <button className="font-spartan" style={{fontSize: 'clamp(12px, 1vw, 22px)'}}>ENTRE EM CONTATO</button>
+                </div>
                 </section>
+
+                
             </main>
         </>
     )

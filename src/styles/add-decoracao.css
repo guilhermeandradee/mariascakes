@@ -4,6 +4,8 @@
     padding: 0 40px;
 
     transition: .3s;
+
+    background-color: #ffe9f3;
 }
 
 .separa-decoracao-direita, .separa-decoracao-esquerda {
@@ -35,20 +37,22 @@
     width: 50%;
 
     display: flex;
-    align-items: start;
+    align-items: center;
 
     margin-top: 8%;
+    
 }
 
 .separa-decoracao-direita li > div {
-    width: 20px;
-    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
 
     border-radius: 5px;
     border: 1px solid #000;
-    margin-right: 20px;
+    margin-right: 22px;
 
     background-color: aliceblue;
+    color: #fff;
 
     transition: .3s;
     cursor: pointer;
@@ -94,6 +98,7 @@
     .separa-decoracao-direita li {
         width: 50%;
         font-size: 14px;
+        
     }
 }
 
