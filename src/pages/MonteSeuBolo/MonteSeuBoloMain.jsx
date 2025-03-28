@@ -223,7 +223,12 @@ function MonteSeuBoloMain() {
         const linkWhatsApp = `https://wa.me/${clienteNumero}?text=${mensagemCodificada}`;
     
         // Redireciona para o WhatsApp
-        window.open(linkWhatsApp, "_blank");
+        if(pedido.formato || pedido.recheio || pedido.tamanho || pedido.massa || pedido.cobertura || pedido.decoracao){
+            alert("preencha todas as informações para pedir")
+        } else {
+
+            window.open(linkWhatsApp, "_blank");
+        }
     }
 
 
