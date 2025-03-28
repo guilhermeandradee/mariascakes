@@ -171,14 +171,12 @@ function MonteSeuBoloMain() {
     function returnOkRecheio(recheio){
         return categoriasRecheio[recheioEscolhido] === recheio && <GoCheck className="ms-2 color-dark-blue" />
     }
-    function returnOk(campo, valor){
-        return campo === valor && <FaCheck  />
-    }
+
     function returnOk(campo, valor){
         if(campo === pedido.decoracao){
             return pedido.decoracao.includes(valor) && <FaCheck  />
         } else {
-            return campo === valor && <FaCheck  />
+            return campo === valor && <FaCheck className="ms-2" />
         }
     }
 
@@ -187,7 +185,7 @@ function MonteSeuBoloMain() {
 
     function returnMINISize(){
         const categoria = categoriasRecheio[pedido.recheio];
-        if(pedido.formato === "REDONDO" && !categoria || categoria === "tradicional"){
+        if(pedido.formato === "REDONDO" && categoria == "tradicional" || !categoria ){
             return(
                 <><div
                     onClick={() => handleClickTamanho("MINI", "tamanho", "MINI")}
@@ -200,6 +198,32 @@ function MonteSeuBoloMain() {
                 </div></>
             )
         }
+    }
+
+    function exibirTexto(texto) {
+        return texto.replace(/_/g, " ").replace(/,/g, ", ");
+    }
+
+    function enviarPedidoWhatsApp() {
+        const clienteNumero = "5511961957783"; 
+    
+        // Monta a mensagem
+        const mensagem = `Olá, gostaria de fazer um pedido com as seguintes características:\n\n` +
+            `🍰 *Formato:* ${pedido.formato}\n` +
+            `🎂 *Recheio:* ${pedido.recheio}\n` +
+            `📏 *Tamanho:* ${pedido.tamanho}\n` +
+            `🍞 *Massa:* ${pedido.massa}\n` +
+            `🍫 *Cobertura:* ${pedido.cobertura}\n` +
+            `✨ *Decoração:* ${pedido.decoracao.join(", ")}`;
+    
+        // Codifica a mensagem para a URL do WhatsApp
+        const mensagemCodificada = encodeURIComponent(mensagem);
+    
+        // Monta o link do WhatsApp
+        const linkWhatsApp = `https://wa.me/${clienteNumero}?text=${mensagemCodificada}`;
+    
+        // Redireciona para o WhatsApp
+        window.open(linkWhatsApp, "_blank");
     }
 
 
@@ -422,7 +446,7 @@ function MonteSeuBoloMain() {
 
                         <button
                         onClick={() => atualizarPedido("massa", "MASSA BRANCA")}
-                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "MASSA BRANCA" ? "ADICIONADO" : "ADICIONAR"}</button>
+                        className="adicionar-cobertura-btn font-spartan">{pedido.massa == "MASSA BRANCA" ? "ADICIONADO" : "ADICIONAR"}{returnOk(pedido.massa, "MASSA BRANCA")} </button>
                     </div>
 
                     <div className="imagem-da-cobertura menu-active
@@ -436,7 +460,7 @@ function MonteSeuBoloMain() {
 
                         <button
                         onClick={() => atualizarPedido("massa", "MASSA DE CHOCOLATE")}
-                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "MASSA DE CHOCOLATE" ? "ADICIONADO" : "ADICIONAR"}</button>
+                        className="adicionar-cobertura-btn font-spartan">{pedido.massa == "MASSA DE CHOCOLATE" ? "ADICIONADO" : "ADICIONAR"}{returnOk(pedido.massa, "MASSA DE CHOCOLATE")}</button>
                     </div>
 
                     <div className="imagem-da-cobertura menu-active
@@ -450,7 +474,7 @@ function MonteSeuBoloMain() {
 
                         <button 
                         onClick={() => atualizarPedido("cobertura", "COBERTURA DE CHANTININHO")}
-                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "COBERTURA DE CHANTININHO" ? "ADICIONADO" : "ADICIONAR"}</button>
+                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "COBERTURA DE CHANTININHO" ? "ADICIONADO" : "ADICIONAR"}{returnOk(pedido.cobertura, "COBERTURA DE CHANTININHO")}</button>
                     </div>
                     <div className="imagem-da-cobertura menu-active
                     d-flex flex-column align-items-center
@@ -463,7 +487,7 @@ function MonteSeuBoloMain() {
 
                         <button
                         onClick={() => atualizarPedido("cobertura", "COBERTURA DE GANACHE")}
-                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "COBERTURA DE GANACHE" ? "ADICIONADO" : "ADICIONAR"}</button>
+                        className="adicionar-cobertura-btn font-spartan">{pedido.cobertura == "COBERTURA DE GANACHE" ? "ADICIONADO" : "ADICIONAR"}{returnOk(pedido.cobertura, "COBERTURA DE GANACHE")}</button>
                     </div>
                 </section>
 
@@ -600,6 +624,7 @@ function MonteSeuBoloMain() {
                         <p className="font-spartan m-0">{pedido.recheio.toUpperCase()}</p>
                     </div>}
 
+
                     {pedido.massa && <div className="item-carrinho">
                         <p className="font-spartan m-0">MASSA</p>
                         <p className="font-spartan m-0">{pedido.massa}</p>
@@ -610,15 +635,17 @@ function MonteSeuBoloMain() {
                         <p className="font-spartan m-0">{pedido.cobertura}</p>
                     </div>}
 
-                    {pedido.decoracao && <div className="item-carrinho">
+                    {pedido.decoracao && pedido.decoracao.length > 0 && 
+                    <div className="item-carrinho">
                         <p className="font-spartan m-0">DECORAÇÃO</p>
-                        <p className="font-spartan m-0">{pedido.decoracao}</p>
+                        <p className="font-spartan m-0">{exibirTexto(`${pedido.decoracao}`)}</p>
                     </div>}
+
                     <p className="font-spartan">Valor Aproximado: R${pedido.preco},00</p>
 
                     <div className="fale-conosco">
                     <h3 className="font-spartan" style={{fontSize: 'clamp(12px, 1vw, 22px)'}}>FALE CONOSCO E ENCOMENDE O SEU PEDIDO</h3>
-                    <button className="font-spartan" style={{fontSize: 'clamp(12px, 1vw, 22px)'}}>ENTRE EM CONTATO</button>
+                    <button onClick={enviarPedidoWhatsApp} className="font-spartan" style={{fontSize: 'clamp(12px, 1vw, 22px)'}}>ENTRE EM CONTATO</button>
                 </div>
                 </section>
 
