@@ -1,5 +1,5 @@
 .doces-info {
-    background-color: #D9FFEB;
+    background-color: #D5F2F7;
 
     padding: 5% 0;
 }
@@ -17,7 +17,7 @@
 
 .doces-info-foto img {
     width: 50%;
-    height: 55vh;
+    height: clamp(20px, 40vw, 450px);
     object-fit: cover;
     object-position: center center;
 }

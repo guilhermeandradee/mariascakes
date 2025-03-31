@@ -13,16 +13,23 @@
     text-align: center;
     font-size: 48px;
 
-    margin: 5% 0;
+    margin: 5% 0 0 0;
+}
+.kits-prontos > p {
+    text-align: center;
+
+    margin: 2% 0 5% 0;
 }
 
-.kit {
+.kit1 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 15%;
 
     background-color: #D4686E;
+    
     width: 75%;
 
     border-radius: 5px;
@@ -30,6 +37,28 @@
     padding: 20px;
 
     margin-bottom: 5%;
+
+    transition: .3s;
+    cursor: pointer;
+}
+.kit1-selecionado {
+    border: 2px solid #5e2727;
+}
+.kit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+
+    width: 100%;
+/* 
+    border-radius: 5px;
+
+    padding: 20px;
+
+    margin-bottom: 5%; */
+
+    transition: .3s;
 }
 .kit *:last-child {
     margin-right: -70px;
@@ -48,6 +77,35 @@
     text-align: center;
 }
 
+.abrir-kit {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #D4686E;
+    color: #fff;
+    width: 100%;
+
+    transition: .3s;
+
+}
+.abrir-kit p {
+    font-size: clamp(10px, 2vw, 16px);
+    margin: 2% 0;
+}
+.divisao {
+    /* display: none; */
+    content: '';
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 90%;
+
+    margin: 3% 0;
+
+    transition: .3s;
+}
+
 @media screen and (max-width: 1260px) {
     .kit {
         display: flex;
@@ -56,7 +114,7 @@
         gap: 0;
     
         background-color: #D4686E;
-        width: 70%;
+        width: 100%;
     
         padding: 20px;
     }
@@ -75,11 +133,11 @@
 @media screen and (max-width: 732px) {
     .kits-prontos > h2 {
         font-size: 32px;
-        margin: 10% 0;
+        margin: 10% 0 0 0;
     }
 
-    .kit {
-        width: 80%;
+    .kit1 {
+        width: 90%;
         padding: 10px;
     }
 
