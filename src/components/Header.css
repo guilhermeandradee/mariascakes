@@ -35,7 +35,12 @@ header div img {
 
 .header-menu li {
     font-size: clamp(12px, 50%, 16px);
+    cursor: pointer;
+    transition: .3s;
 
+}
+.header-menu li:hover {
+    text-decoration: underline;
 }
 @media screen and (max-width: 1260px) {
     header div img {

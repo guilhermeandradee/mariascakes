@@ -1,12 +1,25 @@
 .imagem-da-cobertura {
     min-height: 70vh;
-    background-image: url(../../images/massabranca.jpg);
+
     background-size: cover;
     background-position: center center;
 
     min-width: 250px;
     width: 25%;
     
+}
+
+.imagem-da-cobertura:nth-child(1) {
+    background-image: url(/images/massabranca.jpg);
+}
+.imagem-da-cobertura:nth-child(2) {
+    background-image: url(/images/massabranca.jpg);
+}
+.imagem-da-cobertura:nth-child(3) {
+    background-image: url(/images/docesvaca.jpeg);
+}
+.imagem-da-cobertura:nth-child(4) {
+    background-image: url(/images/chantininhocobertura.jpeg);
 }
 
 .imagem-da-cobertura:hover #bolo-icon {
@@ -80,7 +93,6 @@ section.coberturas {
 @media screen and (max-width: 1260px) {
     .imagem-da-cobertura {
         min-height: 70vh;
-        background-image: url(../../images/brownie.jpg);
         background-size: cover;
         min-width: 150px;
         width: 50%;
@@ -145,7 +157,6 @@ section.coberturas {
 @media screen and (max-width: 732px) {
     .imagem-da-cobertura {
         min-height: 70vh;
-        background-image: url(../../images/brownie.jpg);
         background-size: cover;
         min-width: 150px;
         width: 50%;

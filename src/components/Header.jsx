@@ -47,11 +47,11 @@ function Header(){
             return (
                 <nav className="col-8 d-flex justify-content-end align-items-center py-2">
                     <ul className="d-flex list-unstyled align-items-center justify-content-end m-0 w-100 font-header header-menu">
-                        <li className="me-4 font-spartan">HOME</li>
-                        <li className="me-4 font-spartan">MONTE SEU BOLO</li>
-                        <li className="me-4 font-spartan">KITS</li>
-                        <li className="me-4 font-spartan">DOCES PERSONALIZADOS</li>
-                        <li className="me-4 font-spartan">PORTFOLIOS</li>
+                        <li className="me-4 font-spartan color-subtitle ">HOME</li>
+                        <li className="me-4 font-spartan color-subtitle ">MONTE SEU BOLO</li>
+                        <li className="me-4 font-spartan color-subtitle ">KITS</li>
+                        <li className="me-4 font-spartan color-subtitle ">DOCES PERSONALIZADOS</li>
+                        <li className="me-4 font-spartan color-subtitle ">PORTFOLIOS</li>
                     </ul>
                 </nav>
             )
@@ -66,7 +66,7 @@ function Header(){
             }}
             >
                 <div className="col-lg-2 col-md-3 col-sm-3 col-6">
-                    <img className="img-fluid" src="/public/image.png" alt="Logo da Empresa" />
+                    <img className="img-fluid" src="/images/image.png" alt="Logo da Empresa" />
                 </div>
             
 

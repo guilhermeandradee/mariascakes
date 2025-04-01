@@ -38,7 +38,7 @@ function Main() {
                                 </button>
                             </div>
                     </div>
-                    <img src="/images/header-bg.png" alt="imagem ilustrativa de bolos personailzados" />
+                    <img src="/images/festavaca.jpeg" alt="imagem ilustrativa de bolos personailzados" />
 
                 </div>
 
@@ -97,12 +97,12 @@ function Main() {
                 </div>
 
                 {/* Alguns feedbacks */}
-                <div className=" pt-5 feedback pb-5">
+                <div className=" pt-5 feedback pb-5 mb-2 mb-sm-1 mb-md-0">
                     <h2 className="font-poiret text-center">100% DE SATISFAÇÃO DOS CLIENTES</h2>
                     <p className="text-center font-spartan m-0">VENHA SER NOSSA PRÓXIMA AVALIAÇÃO</p>
                     <div className="text-center">★★★★★</div>
 
-                    <div className="feedback-images mt-5">
+                    <div className="feedback-images mt-5 mb-md-5 ">
                         <div></div>
                         <div></div>
                         <div></div>

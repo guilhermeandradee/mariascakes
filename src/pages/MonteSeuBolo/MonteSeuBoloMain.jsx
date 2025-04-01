@@ -237,7 +237,9 @@ function MonteSeuBoloMain() {
         <>
             <main className="">
                 {/* primeira sessão */}
+                
                 <div className="d-flex flex-column justify-content-center align-items-center mt-5 px-2">
+                    {/* <Header /> */}
                     <h2 className="font-poiret text-center col-sm-8 col-12 color-dark-blue">Crie seu bolo do jeito que quiser e veja uma estimativa de preço!</h2>
 
                     <p className="font-spartan color-dark-blue mt-5 com-sm-12 col-10 text-center">Quer algo exclusivo fora do <a href="">cardápio</a>? Chama a gente no <a href="">WhatsApp</a> e vamos criar juntos!</p>
@@ -249,7 +251,7 @@ function MonteSeuBoloMain() {
 
                 {/* seleção de bolo */}
                 <section className="row m-0 mt-5">
-                    <div className="bg-success col-12 col-md-6 d-flex flex-column align-items-center justify-content-between monte-seu-bolo-imagens p-4 py-5 font-spartan text-light"
+                    <div className="col-12 col-md-6 d-flex flex-column align-items-center justify-content-between monte-seu-bolo-imagens p-4 py-5 font-spartan text-light"
                     style={{
                         backgroundImage: 'url(/images/cup.jpg)',
                         backgroundSize: 'cover',
@@ -260,7 +262,7 @@ function MonteSeuBoloMain() {
                         <button onClick={() => atualizarPedido("formato", "REDONDO")} className="formato-btn mt-5 col-6 col-md-5 m-0 rounded"><p className="m-0 p-2 font-spartan text-light font-w-normal ">{pedido.formato == "REDONDO" ? "ESCOLHIDO" : "ESCOLHER"}{returnOk(pedido.formato, "REDONDO")}</p></button>
                     </div>
 
-                    <div className="bg-success col-12 col-md-6 d-flex flex-column align-items-center justify-content-between monte-seu-bolo-imagens p-4 py-5 font-spartan text-light"
+                    <div className="col-12 col-md-6 d-flex flex-column align-items-center justify-content-between monte-seu-bolo-imagens p-4 py-5 font-spartan text-light"
                     style={{
                         backgroundImage: 'url(/images/cup2.jpg)',
                         backgroundSize: 'cover',
@@ -460,7 +462,7 @@ function MonteSeuBoloMain() {
                     d-flex flex-column align-items-center
                     " 
                     >
-                        <h3 className="font-poiret color-subtitle text-center">MASSA DE CHOCLATE</h3>
+                        <h3 className="font-poiret color-subtitle text-center">MASSA DE CHOCOLATE</h3>
                         <p className="font-spartan color-subtitle text-center">Deliciosa cobertura usando creme de leite ao leite e chocolate ao late</p>
 
                         <LuCakeSlice id="bolo-icon" />

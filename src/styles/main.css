@@ -173,8 +173,10 @@ main {
     color: #D4686E;
     background-color: #FFE9F3;
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    
 }
+
 .feedback > h2 {
     font-size: clamp(20px, 4vw, 48px);
     /* width: 90%; */
