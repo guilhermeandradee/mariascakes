@@ -3,7 +3,7 @@ import App from "./App";
 import MonteSeuBolo from "./pages/MonteSeuBolo/MonteSeuBolo";
 import CardapioDocesPersonalizados from "./pages/CardapioDocesPersonalizados";
 
-import PortfolioBolos from "./pages/portfolio/portfolioBolos";
+import PortfolioBolos from "./pages/portfolio/portfolioBolos.jsx";
 
 import PortfolioKits from "./pages/portfolio/PortfolioKits";
 function MainRoutes() {
