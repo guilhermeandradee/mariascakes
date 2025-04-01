@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext } from 'react'
 import './Header.css'
 import { AppContext } from '../contexts/windowSizeContext';
+import { RxCross2 } from "react-icons/rx";
+
 
 
 function Header(){

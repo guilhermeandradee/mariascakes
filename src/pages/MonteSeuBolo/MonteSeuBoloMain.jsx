@@ -9,6 +9,7 @@ import { GoCheck } from "react-icons/go";
 import { LuCakeSlice } from "react-icons/lu";
 import { TbCakeRoll } from "react-icons/tb";
 import { FaCheck } from "react-icons/fa6";
+import HamMenu from "../../components/HamMenu"
 
 
 const precos = {
@@ -244,6 +245,7 @@ function MonteSeuBoloMain() {
                     {/* <img className="img-fluid mt-3 mt-sm-5" src="/images/arrow.png" alt="imagem de seta apontando para baixo" style={{maxWidth: '5%'}} /> */}
                     <LuCakeSlice className="img-fluid mt-3 mt-sm-5 color-dark-blue" style={{width: 'clamp(30px, 2vw, 3vw)'}}/>
                 </div>
+                <HamMenu/>
 
                 {/* seleção de bolo */}
                 <section className="row m-0 mt-5">

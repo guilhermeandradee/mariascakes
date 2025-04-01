@@ -295,9 +295,8 @@ main {
     .banner-img {
         flex-direction: column-reverse;
         justify-content: flex-start;
-        background-color: red;
+        max-height: none;
 
-        
     }
 
     .hero-div{
@@ -307,9 +306,12 @@ main {
 
     .banner-img img {
         width: 100%;
-        height: 40vh;
+        height: clamp( 50vh, 40vh, 100vh);
     }
     
+    .hero-div {
+
+    }
 
     .banner-img > h1 {
         /* font-size: 48px; */
