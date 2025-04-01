@@ -1,5 +1,6 @@
 import '../../styles/portfolio-bolos.css'
 import Header from "../../components/Header.jsx"
+
 function PortfolioBolos(){
     return(
         <>

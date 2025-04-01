@@ -4,7 +4,7 @@ import MonteSeuBolo from "./pages/MonteSeuBolo/MonteSeuBolo";
 import CardapioDocesPersonalizados from "./pages/CardapioDocesPersonalizados";
 
 import PortfolioKits from "./pages/portfolio/PortfolioKits";
-import PortfolioBolos from "./pages/portfolio/portfolioBolos";
+import PortfolioBolos from "./pages/portfolio/PortfolioBolos";
 function MainRoutes() {
     return(
         <Routes>
